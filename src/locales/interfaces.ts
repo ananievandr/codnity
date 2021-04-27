@@ -45,4 +45,28 @@ export interface LocaleMessages {
       };
     };
   };
+  ourApproach: {
+    partnership: {
+      clientToPartner: {
+        title: string;
+        subTitle: string;
+        content: string;
+      };
+      riskManagement: {
+        title: string;
+        subTitle: string;
+        content: string;
+      };
+      agile: {
+        title: string;
+        subTitle: string;
+        content: string;
+      };
+      humanCenteredDesign: {
+        title: string;
+        subTitle: string;
+        content: string;
+      };
+    };
+  };
 }

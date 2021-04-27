@@ -1,10 +1,16 @@
 import React, { ReactElement } from 'react';
+import clsx from 'clsx';
 import Typography from '@material-ui/core/Typography';
 
 import { useStyles } from './styles';
 import { TypographyHeadlineProps } from './interfaces';
 
-function TypographyHeadline({ markedWidth = 0, markedFrom, ...props }: TypographyHeadlineProps): ReactElement {
+function TypographyHeadline({
+  markedWidth = 0,
+  markedFrom,
+  className,
+  ...props
+}: TypographyHeadlineProps): ReactElement {
   const classes = useStyles();
   const nonMarkedWidth = 100 - markedWidth;
   const markedStyles = {
@@ -13,7 +19,7 @@ function TypographyHeadline({ markedWidth = 0, markedFrom, ...props }: Typograph
   };
   return (
     <div className={classes.root}>
-      <Typography {...props} className={classes.typography}>
+      <Typography {...props} className={clsx(className, classes.typography)}>
         {props.children}
         <span className={classes.contentMarked} style={markedStyles} />
       </Typography>

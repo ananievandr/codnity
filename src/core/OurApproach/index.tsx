@@ -1,7 +1,18 @@
 import React, { ReactElement } from 'react';
+import { Grid } from '@material-ui/core';
+
+import { Welcome } from './Welcome';
+import { PartnershipApproach } from './PartnershipApproach';
+import { ProjectPath } from './ProjectPath';
 
 function OurApproach(): ReactElement {
-  return <div>OurApproach</div>;
+  return (
+    <Grid container>
+      <Welcome />
+      <PartnershipApproach />
+      <ProjectPath />
+    </Grid>
+  );
 }
 
 export { OurApproach };

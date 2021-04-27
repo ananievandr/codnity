@@ -24,11 +24,13 @@ const enLocale: LocaleMessages = {
   company: {
     founder1: {
       title: 'Janis Anspaks',
-      content: 'Half man, half software. Janis is the most linear thinking guy you can find. He likes mountain snowboarding, books, jokes, and tech. No, he loves tech. Janis is also a big supporter of harmonized and well-balanced city life. He lives in the city center and is not planning to move away into suburbs. After his words: “you just can’t get so nice food outside city”. What can you conclude? He is an epicure. Originally comes from rough, tough, and cold place, but full of warm people - Latgale. He is honest, true, and does not fuck around when he does his job.',
+      content:
+        'Half man, half software. Janis is the most linear thinking guy you can find. He likes mountain snowboarding, books, jokes, and tech. No, he loves tech. Janis is also a big supporter of harmonized and well-balanced city life. He lives in the city center and is not planning to move away into suburbs. After his words: “you just can’t get so nice food outside city”. What can you conclude? He is an epicure. Originally comes from rough, tough, and cold place, but full of warm people - Latgale. He is honest, true, and does not fuck around when he does his job.',
     },
     founder2: {
       title: 'Girts Ledins',
-      content: 'Half funny, mostly not. Girts is a serial entrepreneur, but that is a really boring description. Yes, he has had an extensive experience with numbers, figures, dough flows, with balance and not so balanced sheets. But that does not tell anything about him. Girts is a family guy and dad of two beautiful boys. He claims himself as a patriarch, but everyone who knows him sees very well who calls the shots in the family. When he was young, and did not know much about business, he played in National Junior Basketball team. He even earned money by playing ball, 150 USD a month. Funny, that made him feel like a king. Do not judge, he was sixteen. Now he is more laid back, reads a lot of books, and is ready to hustle hard when shit needs to be done.',
+      content:
+        'Half funny, mostly not. Girts is a serial entrepreneur, but that is a really boring description. Yes, he has had an extensive experience with numbers, figures, dough flows, with balance and not so balanced sheets. But that does not tell anything about him. Girts is a family guy and dad of two beautiful boys. He claims himself as a patriarch, but everyone who knows him sees very well who calls the shots in the family. When he was young, and did not know much about business, he played in National Junior Basketball team. He even earned money by playing ball, 150 USD a month. Funny, that made him feel like a king. Do not judge, he was sixteen. Now he is more laid back, reads a lot of books, and is ready to hustle hard when shit needs to be done.',
     },
     ourValues: {
       codingInIntegrity: {

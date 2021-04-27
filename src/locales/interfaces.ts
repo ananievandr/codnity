@@ -21,4 +21,28 @@ export interface LocaleMessages {
   footer: {
     description: string;
   };
+  company: {
+    founder1: {
+      title: string;
+      content: string;
+    };
+    founder2: {
+      title: string;
+      content: string;
+    };
+    ourValues: {
+      codingInIntegrity: {
+        title: string;
+        content: string;
+      };
+      codingInOpennes: {
+        title: string;
+        content: string;
+      };
+      codingInFun: {
+        title: string;
+        content: string;
+      };
+    };
+  };
 }

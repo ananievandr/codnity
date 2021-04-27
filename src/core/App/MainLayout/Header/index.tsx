@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 
 import { ElevationScroll } from 'hocs/ElevationScroll';
 import { Props } from 'hocs/ElevationScroll/interfaces';
-import { Icon } from 'uikit/Icon';
+import { IconCodnity } from 'uikit/IconCodnity';
 import { Routes } from 'utils/constants/Routes';
 
 import { useStyles } from './styles';
@@ -39,7 +39,7 @@ function Header(props: Props): ReactElement {
           <Container maxWidth="lg">
             <Toolbar className={classes.toolbar}>
               <NavLink to={Routes.main}>
-                <Icon className={classes.codnityLogo} name="codnity-logo" width="122px" height="36px" />
+                <IconCodnity className={classes.codnityLogo} name="codnity-logo" width="122px" height="36px" />
               </NavLink>
               <div className={classes.sectionDesktop}>
                 <ButtonRouterLink to={Routes.career} title="navigation.career" noWeight />

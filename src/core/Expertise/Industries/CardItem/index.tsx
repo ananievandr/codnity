@@ -16,7 +16,9 @@ function CardItem({ title, contentItems, icon }: CardItemProps): ReactElement {
       </div>
       <Box component="div">
         <Box component="div" className={classes.header}>
-          <Typography variant="h6" className={classes.title}>{title}</Typography>
+          <Typography variant="h6" className={classes.title}>
+            {title}
+          </Typography>
         </Box>
         <Box component="div" marginLeft="15px">
           {contentItems.map((item, i) => (

@@ -1,20 +1,17 @@
 import React, { ReactElement } from 'react';
-import { TypographyHeadline } from 'uikit/TypographyHeadline';
-import Typography from '@material-ui/core/Typography';
+import { Grid, Typography } from '@material-ui/core';
 import clsx from 'clsx';
 
-import { useStyles } from './styles';
-import { Grid } from '@material-ui/core';
 import { IconCodnity } from 'uikit/IconCodnity';
+
+import { useStyles } from './styles';
 
 function Career(): ReactElement {
   const classes = useStyles();
   return (
     <Grid container className={classes.root}>
-      <Grid item sm={6} xs={12}>
-        <TypographyHeadline variant="h3" markedFrom="start" markedWidth={51}>
-          Start career at Codnity
-        </TypographyHeadline>
+      <Grid item md={6} sm={12}>
+        <Typography variant="h1">Start career at Codnity</Typography>
         <div className={classes.textBlock}>
           <Typography variant="body2" className={classes.paragraph}>
             If you want to have a kick ass career, understand business, and around what the world is spinning, also you
@@ -36,7 +33,7 @@ function Career(): ReactElement {
           </Typography>
         </div>
       </Grid>
-      <Grid item sm={6} xs={12}>
+      <Grid item md={6} sm={12}>
         <IconCodnity className={classes.icon} name="asset:hiring-people" width="100%" height="100%" />
       </Grid>
     </Grid>

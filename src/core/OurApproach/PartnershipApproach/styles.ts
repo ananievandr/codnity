@@ -10,6 +10,11 @@ export const useStyles = makeStyles(theme =>
     },
     title: {
       textAlign: 'center',
+      maxWidth: 730,
+      marginBottom: 100,
+      [theme.breakpoints.down('sm')]: {
+        marginBottom: 75,
+      },
     },
   }),
 );

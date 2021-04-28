@@ -12,7 +12,6 @@ export const useStyles = makeStyles(theme =>
     },
     paragraph: {
       marginBottom: 30,
-      letterSpacing: '0.01em',
     },
     textBlock: {
       paddingRight: 165,

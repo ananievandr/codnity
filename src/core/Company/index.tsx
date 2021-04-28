@@ -1,14 +1,14 @@
 import React, { ReactElement } from 'react';
 import { Grid } from '@material-ui/core';
 
-import { WhoWeAre } from './WhoWeAre';
+import { Welcome } from './Welcome';
 import { OurValues } from './OurValues';
 import { OurFounders } from './OurFounders';
 
 function Company(): ReactElement {
   return (
     <Grid container>
-      <WhoWeAre />
+      <Welcome />
       <OurValues />
       <OurFounders />
     </Grid>

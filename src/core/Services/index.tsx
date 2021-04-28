@@ -1,7 +1,16 @@
 import React, { ReactElement } from 'react';
+import { Grid } from '@material-ui/core';
+
+import { ServiceCard } from './ServiceCard';
+import { Welcome } from './Welcome';
 
 function Services(): ReactElement {
-  return <div>Services</div>;
+  return (
+    <Grid container>
+      <Welcome />
+      <ServiceCard />
+    </Grid>
+  );
 }
 
 export { Services };

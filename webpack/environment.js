@@ -1,8 +1,6 @@
 /* eslint-disable */
 const path = require('path');
 
-const pkg = require('../package');
-
 const getRealPath = relativePath => path.resolve(__dirname, '../', relativePath);
 
 module.exports = {
@@ -22,13 +20,7 @@ module.exports = {
     babelLoaderCacheDirectory: getRealPath('node_modules/.cache/babel-loader'),
   },
   relativePaths: {
-    images: `assets/images`,
-    js: 'js',
-  },
-  context: {
-    route: '/efs-ermops-static',
-    apiDev: 'http://10.53.14.56:9080/efs-ermops/rest',
-    apiProd: '/efs-ermops/rest',
-    cssPrefix: `${pkg.name}-`,
+    images: `static/assets/images`,
+    js: 'static/js',
   },
 };

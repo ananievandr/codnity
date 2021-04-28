@@ -10,12 +10,12 @@ import { ElevationScroll } from 'hocs/ElevationScroll';
 import { Props } from 'hocs/ElevationScroll/interfaces';
 import { IconCodnity } from 'uikit/IconCodnity';
 import { Routes } from 'utils/constants/Routes';
+import { ButtonRouter } from 'uikit/ButtonRouter';
 
 import { useStyles } from './styles';
 import { MobileView } from './MobileView';
 import { ButtonRouterLink } from './ButtonRouterLink';
 import { ExpertiseMenu } from './ExpertiseMenu';
-import { ButtonRouter } from './ButtonRouter';
 import { LanguageMenu } from './LanguageMenu';
 
 function Header(props: Props): ReactElement {

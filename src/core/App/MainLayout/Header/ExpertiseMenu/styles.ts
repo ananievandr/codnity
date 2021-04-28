@@ -19,6 +19,13 @@ export const useStyles = makeStyles((theme: Theme) =>
       },
     },
     focusVisible: {},
+    link: {
+      textDecoration: 'none',
+      color: '#212121',
+      letterSpacing: '0.01em',
+      fontSize: '14px',
+      lineHeight: '24px',
+    },
     buttonTitle: {
       position: 'relative',
       color: '#000000',

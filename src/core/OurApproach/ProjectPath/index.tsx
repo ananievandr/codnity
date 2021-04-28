@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react';
-import { TypographyHeadline } from 'uikit/TypographyHeadline';
-import { Box } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 
 import { IconCodnity } from 'uikit/IconCodnity';
 
@@ -18,12 +17,14 @@ function ProjectPath(): ReactElement {
       className={classes.root}
       width="100%"
     >
-      <TypographyHeadline variant="h3" markedFrom="end" markedWidth={38} className={classes.title}>
+      <Typography variant="h1" className={classes.title}>
         Project path
-      </TypographyHeadline>
-      <div className={classes.iconWrapper}>
-        <IconCodnity name="asset:project-path" width="100%" height="100%" />
-      </div>
+      </Typography>
+      <Box component="div" width="100%" height="100%">
+        <IconCodnity name="asset:project-path" className={classes.iconDesktop} width="100%" height="100%" />
+        <IconCodnity name="asset:project-path-tablet" className={classes.iconTablet} width="100%" height="100%" />
+        <IconCodnity name="asset:project-path-mobile" className={classes.iconMobile} width="100%" height="100%" />
+      </Box>
     </Box>
   );
 }

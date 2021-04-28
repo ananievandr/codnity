@@ -3,20 +3,27 @@ import { createStyles, makeStyles } from '@material-ui/core/styles';
 export const useStyles = makeStyles(theme =>
   createStyles({
     root: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
       marginTop: '20px',
     },
     title: {
       textAlign: 'center',
     },
-    iconWrapper: {
-      width: '100%',
-      height: '100%',
+    iconDesktop: {
+      display: 'none',
+      [theme.breakpoints.up('md')]: {
+        display: 'inline-block',
+      },
+    },
+    iconTablet: {
+      display: 'none',
+      [theme.breakpoints.between('md', 'sm')]: {
+        display: 'inline-block',
+      },
+    },
+    iconMobile: {
+      display: 'none',
       [theme.breakpoints.down('sm')]: {
-        width: 344,
-        height: 967,
+        display: 'inline-block',
       },
     },
   }),

@@ -6,25 +6,37 @@ export const useStyles = makeStyles(theme =>
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      margin: '100px 0',
+      [theme.breakpoints.up('md')]: {
+        marginBottom: 145,
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        marginBottom: 100,
+      },
+      [theme.breakpoints.down('sm')]: {
+        marginBottom: 90,
+        textAlign: 'center',
+      },
     },
     border: {
       border: '3px dashed rgba(91, 57, 155, 0.2)',
       boxSizing: 'border-box',
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         padding: '0 84px',
       },
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up('md')]: {
         padding: '54px 0',
+      },
+      [theme.breakpoints.down('sm')]: {
+        maxWidth: 340,
       },
     },
     separator: {
-      [theme.breakpoints.up('xs')]: {
+      [theme.breakpoints.up('sm')]: {
         border: 'none',
         borderRight: '1px solid rgba(91, 57, 155, 0.2)',
         height: '100%',
       },
-      [theme.breakpoints.down('xs')]: {
+      [theme.breakpoints.down('sm')]: {
         border: 'none',
         borderBottom: '1px solid rgba(91, 57, 155, 0.2)',
       },
@@ -32,9 +44,8 @@ export const useStyles = makeStyles(theme =>
     contentCenter: {
       display: 'flex',
       flexDirection: 'column',
-      [theme.breakpoints.down('xs')]: {
-        justifyContent: 'flex-start',
-        alignItems: 'flex-start',
+      [theme.breakpoints.down('sm')]: {
+        textAlign: 'left',
         padding: '40px 0 60px',
       },
     },

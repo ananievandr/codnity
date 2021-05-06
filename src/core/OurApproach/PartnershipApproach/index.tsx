@@ -1,5 +1,7 @@
 import React, { ReactElement } from 'react';
-import { Box, Grid, Typography } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
+
+import { SectionHeader } from 'uikit/SectionHeader';
 
 import { useStyles } from './styles';
 import { CardItem } from './CardItem';
@@ -8,11 +10,12 @@ function PartnershipApproach(): ReactElement {
   const classes = useStyles();
   return (
     <Box component="div" display="flex" flexDirection="column" className={classes.root}>
-      <Typography variant="h1" className={classes.title}>
-        We believe in our structural and friendly partnership approach
-      </Typography>
-      <Grid container justify="space-between" spacing={8}>
-        <Grid item sm={6} xs={12}>
+      <SectionHeader
+        className={classes.title}
+        title="We believe in our structural and friendly [partnership approach]"
+      />
+      <Grid container justify="space-between">
+        <Grid item lg={6} md={12}>
           <CardItem
             title="ourApproach.partnership.clientToPartner.title"
             subTitle="ourApproach.partnership.clientToPartner.subTitle"
@@ -20,7 +23,7 @@ function PartnershipApproach(): ReactElement {
             icon="approach-1"
           />
         </Grid>
-        <Grid item sm={6} xs={12}>
+        <Grid item lg={6} md={12}>
           <CardItem
             title="ourApproach.partnership.riskManagement.title"
             subTitle="ourApproach.partnership.riskManagement.subTitle"
@@ -29,8 +32,8 @@ function PartnershipApproach(): ReactElement {
           />
         </Grid>
       </Grid>
-      <Grid container justify="space-between" spacing={8}>
-        <Grid item sm={6} xs={12}>
+      <Grid container justify="space-between">
+        <Grid item lg={6} md={12}>
           <CardItem
             title="ourApproach.partnership.agile.title"
             subTitle="ourApproach.partnership.agile.subTitle"
@@ -38,7 +41,7 @@ function PartnershipApproach(): ReactElement {
             icon="approach-3"
           />
         </Grid>
-        <Grid item sm={6} xs={12}>
+        <Grid item lg={6} md={12}>
           <CardItem
             title="ourApproach.partnership.humanCenteredDesign.title"
             subTitle="ourApproach.partnership.humanCenteredDesign.subTitle"

@@ -30,6 +30,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       position: 'relative',
       color: '#000000',
       padding: `0 0 2px`,
+      fontWeight: 500,
     },
     buttonMarked: {
       opacity: 0,
@@ -40,6 +41,9 @@ export const useStyles = makeStyles((theme: Theme) =>
       bottom: -2,
       left: 'calc(50% - 9px)',
       transition: theme.transitions.create('opacity'),
+    },
+    icon: {
+      width: '18px',
     },
   }),
 );

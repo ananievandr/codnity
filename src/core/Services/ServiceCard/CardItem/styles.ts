@@ -8,8 +8,19 @@ export const useStyles = makeStyles(theme =>
       padding: '16px 32px',
       borderRadius: 5,
       marginBottom: 20,
-      ':&last-child': {
-        marginBottom: 0,
+      [theme.breakpoints.down('md')]: {
+        padding: '12px 24px',
+        '& $index': {
+          width: 26,
+          height: 26,
+        },
+      },
+    },
+    content: {
+      fontWeight: 500,
+      maxWidth: 460,
+      [theme.breakpoints.down('md')]: {
+        maxWidth: 265,
       },
     },
     index: {

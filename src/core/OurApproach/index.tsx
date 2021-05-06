@@ -1,6 +1,8 @@
 import React, { ReactElement } from 'react';
 import { Grid } from '@material-ui/core';
 
+import withScrollToTop from 'hocs/ScrollToTop';
+
 import { Welcome } from './Welcome';
 import { PartnershipApproach } from './PartnershipApproach';
 import { ProjectPath } from './ProjectPath';
@@ -15,4 +17,4 @@ function OurApproach(): ReactElement {
   );
 }
 
-export { OurApproach };
+export default withScrollToTop(OurApproach);

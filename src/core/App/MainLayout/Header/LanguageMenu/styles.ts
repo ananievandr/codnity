@@ -23,6 +23,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       position: 'relative',
       color: '#000000',
       padding: `0 0 2px`,
+      fontWeight: 700,
     },
     buttonMarked: {
       opacity: 0,
@@ -37,6 +38,9 @@ export const useStyles = makeStyles((theme: Theme) =>
     menuRoot: {
       boxShadow: '0px 4px 8px rgba(97, 97, 97, 0.14), 0px 8px 16px rgba(97, 97, 97, 0.14)',
       borderRadius: '8px',
+    },
+    icon: {
+      width: '18px',
     },
   }),
 );

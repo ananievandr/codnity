@@ -3,7 +3,7 @@ import { createStyles, makeStyles } from '@material-ui/core/styles';
 export const useStyles = makeStyles(theme =>
   createStyles({
     root: {
-      marginTop: '20px',
+      margin: '20px 0 40px',
     },
     title: {
       textAlign: 'center',

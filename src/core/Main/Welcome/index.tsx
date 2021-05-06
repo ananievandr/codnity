@@ -1,9 +1,10 @@
 import React, { ReactElement } from 'react';
-import { Grid, Typography } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
 
 import { IconCodnity } from 'uikit/IconCodnity';
 import { ButtonRouter } from 'uikit/ButtonRouter';
 import { Routes } from 'utils/constants/Routes';
+import { SectionHeader } from 'uikit/SectionHeader';
 
 import { useStyles } from './styles';
 
@@ -11,14 +12,14 @@ function Welcome(): ReactElement {
   const classes = useStyles();
   return (
     <Grid container className={classes.root}>
-      <Grid item md={6} sm={12}>
-        <Typography variant="h1">
-          We develop state of art software and digital products for ambitions companies
-        </Typography>
-        <ButtonRouter className={classes.button} title="get free consultation" to={Routes.getInTouch} />
+      <Grid item lg={6} md={12} className={classes.gridTitle}>
+        <Box component="div" className={classes.titleBox}>
+          <SectionHeader title="We develop state of art [software] and [digital products] for ambitions companies" />
+          <ButtonRouter className={classes.button} title="get free consultation" to={Routes.getInTouch} />
+        </Box>
       </Grid>
-      <Grid item md={6} sm={12}>
-        <IconCodnity className={classes.icon} name="asset:web-development" width="100%" height="100%" />
+      <Grid item lg={6} md={12}>
+        <IconCodnity name="asset:web-development" width="100%" height="100%" />
       </Grid>
     </Grid>
   );

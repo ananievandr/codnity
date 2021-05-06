@@ -1,3 +1,5 @@
+import { IService } from './interfaces/services';
+
 export interface Locale {
   [key: string]: string;
 }
@@ -68,5 +70,51 @@ export interface LocaleMessages {
         content: string;
       };
     };
+  };
+  main: {
+    services: {
+      idea: {
+        title: string;
+        content: string;
+      };
+      design: {
+        title: string;
+        content: string;
+      };
+      web: {
+        title: string;
+        content: string;
+      };
+      backend: {
+        title: string;
+        content: string;
+      };
+      banking: {
+        title: string;
+        content: string;
+      };
+      app: {
+        title: string;
+        content: string;
+      };
+      support: {
+        title: string;
+        content: string;
+      };
+      platform: {
+        title: string;
+        content: string;
+      };
+    };
+  };
+  servicesPage: {
+    ideationAndEvaluation: IService;
+    design: IService;
+    webDevelopment: IService;
+    backend: IService;
+    banking: IService;
+    appDevelopment: IService;
+    supportAndManagement: IService;
+    platformDevelopment: IService;
   };
 }

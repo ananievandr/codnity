@@ -1,10 +1,10 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
-export const useStyles = makeStyles({
-  container: {
-    paddingTop: 40,
-    paddingBottom: 40,
-    display: 'flex',
-    alignItems: 'center',
-  },
-});
+export const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    container: {
+      display: 'flex',
+      alignItems: 'center',
+    },
+  }),
+);

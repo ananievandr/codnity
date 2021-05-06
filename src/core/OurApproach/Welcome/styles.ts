@@ -6,8 +6,11 @@ export const useStyles = makeStyles(theme =>
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         textAlign: 'center',
+      },
+      [theme.breakpoints.up('lg')]: {
+        height: 'calc(100vh - 80px)',
       },
     },
     paragraph: {
@@ -16,13 +19,9 @@ export const useStyles = makeStyles(theme =>
     },
     textBlock: {
       paddingRight: 165,
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         paddingRight: 0,
       },
-    },
-    icon: {
-      minWidth: 440,
-      minHeight: 330,
     },
   }),
 );

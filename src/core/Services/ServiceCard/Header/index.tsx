@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import { FormattedMessage } from 'react-intl';
 import Typography from '@material-ui/core/Typography';
 import { Box } from '@material-ui/core';
 
@@ -10,9 +11,11 @@ function Header({ title, subTitle }: HeaderProps): ReactElement {
   return (
     <Box component="div" className={classes.root}>
       <Typography variant="h6" className={classes.title}>
-        {title}
+        <FormattedMessage id={title} />
       </Typography>
-      <Typography variant="body2">{subTitle}</Typography>
+      <Typography variant="body2">
+        <FormattedMessage id={subTitle} />
+      </Typography>
     </Box>
   );
 }

@@ -3,12 +3,15 @@ import { createStyles, makeStyles } from '@material-ui/core/styles';
 export const useStyles = makeStyles(theme =>
   createStyles({
     root: {
+      display: 'flex',
+      alignItems: 'center',
       justifyContent: 'space-between',
-      [theme.breakpoints.down('sm')]: {
-        justifyContent: 'center',
+      [theme.breakpoints.down('md')]: {
         textAlign: 'center',
       },
-      marginBottom: 100,
+      [theme.breakpoints.up('lg')]: {
+        height: 'calc(100vh - 80px)',
+      },
     },
     title: {
       [theme.breakpoints.up('sm')]: {
@@ -17,10 +20,6 @@ export const useStyles = makeStyles(theme =>
       [theme.breakpoints.down('sm')]: {
         maxWidth: 570,
       },
-    },
-    icon: {
-      minWidth: 400,
-      minHeight: 300,
     },
   }),
 );

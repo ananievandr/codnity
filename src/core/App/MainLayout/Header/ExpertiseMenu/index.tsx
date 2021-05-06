@@ -37,7 +37,7 @@ function ExpertiseMenu(): ReactElement {
           <FormattedMessage id="navigation.expertise" />
           <span className={classes.buttonMarked} />
         </Typography>
-        {open ? <ExpandLess /> : <ExpandMore />}
+        {open ? <ExpandLess className={classes.icon} /> : <ExpandMore className={classes.icon} />}
       </ButtonBase>
       <MenuCodnity anchorEl={anchorEl} keepMounted open={open} onClose={handleClose}>
         <MenuItemCodnity onClick={handleClose}>

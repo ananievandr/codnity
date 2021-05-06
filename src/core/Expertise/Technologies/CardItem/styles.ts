@@ -19,8 +19,8 @@ export const useStyles = makeStyles(theme =>
         height: 141,
       },
       [theme.breakpoints.down('sm')]: {
-        width: 166,
-        height: 121,
+        width: 160,
+        height: 115,
       },
       '&:hover': {
         backgroundColor: '#7C61AF',

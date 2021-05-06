@@ -51,7 +51,7 @@ function LanguageMenu(): ReactElement {
           {language.title}
           <span className={classes.buttonMarked} />
         </Typography>
-        {open ? <ExpandLess /> : <ExpandMore />}
+        {open ? <ExpandLess className={classes.icon} /> : <ExpandMore className={classes.icon} />}
       </ButtonBase>
       <MenuCodnity anchorEl={anchorEl} keepMounted open={open} onClose={handleClose}>
         {languageList.map(item => (

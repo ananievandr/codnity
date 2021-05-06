@@ -37,6 +37,9 @@ export const useStyles = makeStyles(theme =>
     },
     contentItem: {
       marginBottom: 10,
+      [theme.breakpoints.down('md')]: {
+        marginBottom: 8,
+      },
       '&:last-child': {
         marginBottom: 0,
       },

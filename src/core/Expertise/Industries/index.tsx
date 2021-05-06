@@ -1,38 +1,14 @@
 import React, { ReactElement } from 'react';
-import { Box, Typography, Grid } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
+
+import { SectionHeader } from 'uikit/SectionHeader';
 
 import { useStyles } from './styles';
 import { CardItem } from './CardItem';
+import { industriesList } from './constants';
 
 function Industries(): ReactElement {
   const classes = useStyles();
-  const array = [
-    {
-      title: 'Banking & Fintech',
-      content: ['Personal tools', 'Automatization', 'Platforms', 'Web apps'],
-      icon: 'industry:online-payment',
-    },
-    {
-      title: 'Banking & Fintech',
-      content: ['Personal tools', 'Automatization', 'Platforms', 'Web apps'],
-      icon: 'industry:online-shopping',
-    },
-    {
-      title: 'Banking & Fintech',
-      content: ['Personal tools', 'Automatization', 'Platforms', 'Web apps'],
-      icon: 'industry:settings',
-    },
-    {
-      title: 'Banking & Fintech',
-      content: ['Personal tools', 'Automatization', 'Platforms', 'Web apps'],
-      icon: 'industry:chatbot',
-    },
-    {
-      title: 'Banking & Fintech',
-      content: ['Personal tools', 'Automatization', 'Platforms', 'Web apps'],
-      icon: 'industry:web-design',
-    },
-  ];
   return (
     <Box
       component="div"
@@ -42,12 +18,10 @@ function Industries(): ReactElement {
       flexDirection="column"
       width="100%"
     >
-      <Typography variant="h1" className={classes.title}>
-        Industries of proven expertise
-      </Typography>
-      <Grid container>
-        {array.map((item, i) => (
-          <Grid key={i} item md={4} sm={6} className={classes.gridItem}>
+      <SectionHeader title="Industries of proven [expertise]" className={classes.title} />
+      <Grid container className={classes.grid}>
+        {industriesList.map((item, i) => (
+          <Grid key={i} item lg={4} md={6} sm={6} xs={6} className={classes.gridItem}>
             <CardItem title={item.title} contentItems={item.content} icon={item.icon} />
           </Grid>
         ))}

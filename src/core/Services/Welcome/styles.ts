@@ -6,8 +6,18 @@ export const useStyles = makeStyles(theme =>
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         textAlign: 'center',
+      },
+      [theme.breakpoints.up('lg')]: {
+        height: 'calc(100vh - 80px)',
+      },
+    },
+    gridTitle: {
+      [theme.breakpoints.down('md')]: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
       },
     },
     paragraph: {
@@ -16,13 +26,14 @@ export const useStyles = makeStyles(theme =>
     },
     textBlock: {
       paddingRight: 165,
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.up('md')]: {
+        maxWidth: 550,
+      },
+      [theme.breakpoints.down('md')]: {
+        maxWidth: 480,
+        textAlign: 'center',
         paddingRight: 0,
       },
-    },
-    icon: {
-      minWidth: 440,
-      minHeight: 330,
     },
   }),
 );

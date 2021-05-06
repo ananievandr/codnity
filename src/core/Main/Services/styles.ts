@@ -6,10 +6,18 @@ export const useStyles = makeStyles(theme =>
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      margin: '100px 0',
+      [theme.breakpoints.up('md')]: {
+        marginBottom: 135,
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        marginBottom: 78,
+      },
+      [theme.breakpoints.down('sm')]: {
+        marginBottom: 100,
+      },
     },
     paragraph: {
-      marginBottom: 30,
+      marginBottom: 48,
       letterSpacing: '0.01em',
       maxWidth: 580,
       textAlign: 'center',

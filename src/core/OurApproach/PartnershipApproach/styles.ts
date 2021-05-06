@@ -7,6 +7,7 @@ export const useStyles = makeStyles(theme =>
       alignItems: 'center',
       justifyContent: 'center',
       marginTop: '100px',
+      width: '100%',
     },
     title: {
       textAlign: 'center',

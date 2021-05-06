@@ -78,6 +78,223 @@ const enLocale: LocaleMessages = {
       },
     },
   },
+  main: {
+    services: {
+      idea: {
+        title: 'Ideation and evaluation',
+        content:
+          'The discovery phase is the key to long-term success. Together, we will define targets and your needs. The result is a clearly defined strategy.',
+      },
+      design: {
+        title: 'Design',
+        content:
+          'Tell us your idea, and our designers will bring it to life. We offer you an exceptional design according to your business needs and best UX/UI practice.',
+      },
+      web: {
+        title: 'Web development',
+        content:
+          'Whether you need a new web app, an e-commerce solution, or a back-office system, we’ve got your back. Improve your business processes and increase profits through strategic web software development.',
+      },
+      backend: {
+        title: 'Backend system development',
+        content:
+          'You can find lots of ready solutions for your company’s CRM or CMS, but they may not give you a full experience. We can custom-build a solutions .',
+      },
+      banking: {
+        title: 'Banking & Fintech',
+        content:
+          'All kinds of IT services and product developments for banking & fintech industry is our core speciality. Our founders combine almost 30 years of experience in IT and banking sector.',
+      },
+      app: {
+        title: 'App development',
+        content:
+          "Mobile apps are in every person's pocket. If you are there, you can constantly be in customers' minds. We develop apps which are appealing and useful for the customer.",
+      },
+      support: {
+        title: 'Support & Management',
+        content: 'We are always ready to support your company in infrastructure, knowledge, and any kind of IT issues.',
+      },
+      platform: {
+        title: 'Platform Development',
+        content:
+          'Platforms, marketplaces, gig economy, the world is changing and platforms give you opportunity to connect two different sides more easily and without hustle. ',
+      },
+    },
+  },
+  servicesPage: {
+    ideationAndEvaluation: {
+      header: {
+        title: 'Ideation and evaluation',
+        subTitle:
+          'The discovery phase is the key to long-term success. Together, we will define targets and your needs. The result is a clearly defined strategy.',
+      },
+      services: {
+        column1: [
+          {
+            cellContent: 'Product design sprint / discovery sprint',
+          },
+          {
+            cellContent: 'Scoping session',
+          },
+          {
+            cellContent: 'Research & validation & feasibility',
+          },
+        ],
+        column2: [
+          {
+            cellContent:
+              'UX review - An evaluation which will help you radically improve your product by eliminating all UX issues to get a truly appealing and streamlined experience that users will love.',
+          },
+          {
+            cellContent: 'Business analysis',
+          },
+        ],
+      },
+    },
+    design: {
+      header: {
+        title: 'Design',
+        subTitle:
+          'Tell us your idea, and our designers will bring it to life. We offer you an exceptional design according to your business needs and best UX/UI practice.',
+      },
+      services: {
+        column1: [
+          {
+            cellContent: 'Product discovery',
+          },
+          {
+            cellContent: 'Mobile design',
+          },
+          {
+            cellContent: 'Web design',
+          },
+          {
+            cellContent: 'Online product design',
+          },
+          {
+            cellContent: 'UI design',
+          },
+        ],
+        column2: [
+          {
+            cellContent: 'UX design',
+          },
+          {
+            cellContent: 'Branding',
+          },
+          {
+            cellContent: 'Name, logo and branding',
+          },
+          {
+            cellContent: 'Illustration',
+          },
+          {
+            cellContent: 'Usability audit',
+          },
+        ],
+      },
+    },
+    webDevelopment: {
+      header: {
+        title: 'Web development',
+        subTitle:
+          'Whether you need a new web app, an e-commerce solution, or a back-office system, we’ve got your back. Improve your business processes and increase profits through strategic web software development.',
+      },
+      services: {
+        column1: [
+          {
+            cellContent: 'Web applications',
+          },
+          {
+            cellContent: 'Websites',
+          },
+        ],
+        column2: [
+          {
+            cellContent: 'Web platforms',
+          },
+          {
+            cellContent: 'eCommerce',
+          },
+        ],
+      },
+    },
+    backend: {
+      header: {
+        title: 'Backend system development or enterprise apps',
+        subTitle:
+          'You can find lots of ready solutions for your company’s CRM or CMS, but they may not give you a full experience. We can custom-build a solutions that solves all your specific problems and satisfies all of your business’ needs.',
+      },
+    },
+    banking: {
+      header: {
+        title: 'Banking & Fintech',
+        subTitle:
+          'All kinds of IT services and product developments for banking & fintech industry is our core speciality. Our founders combine almost 30 years of experience in IT and banking sector. That gives us ability to provide any kind of IT services specifically tailored for banks and fintechs. Our products and solutions are user-friendly, cutting edge and affordable. Our client-centred approach will focus on understanding your business needs, your market position and competition, and providing expert consulting.',
+      },
+    },
+    appDevelopment: {
+      header: {
+        title: 'App development',
+        subTitle:
+          "Mobile apps are in every person's pocket. If you are there, you can constantly be in customers' minds. We develop apps which are appealing and useful for the customer, thus, they are not getting erased from the phone.",
+      },
+      services: {
+        column1: [
+          {
+            cellContent: 'iOS',
+          },
+          {
+            cellContent: 'Android',
+          },
+        ],
+        column2: [
+          {
+            cellContent: 'Cross-platform development',
+          },
+        ],
+      },
+    },
+    supportAndManagement: {
+      header: {
+        title: 'Support & Management',
+        subTitle:
+          'We are always ready to support your company in infrastructure, knowledge, and any kind of IT issues.',
+      },
+      services: {
+        column1: [
+          {
+            cellContent: 'Agile project management',
+          },
+          {
+            cellContent:
+              'Quality Assurance - QA is of utmost importance to make sure apps run smoothly and without any errors. Combining manual and automated testing, our team of expert QA engineers can guarantee the best quality for your digital product.',
+          },
+          {
+            cellContent: 'Cloud technology',
+          },
+        ],
+        column2: [
+          {
+            cellContent: 'Cloud & DevOps',
+          },
+          {
+            cellContent: 'Strategy - product ownership, project management, lean product development',
+          },
+          {
+            cellContent: 'Coaching - technological coaching, methodology coaching, Agile adoption.',
+          },
+        ],
+      },
+    },
+    platformDevelopment: {
+      header: {
+        title: 'Platform development',
+        subTitle:
+          'Platforms, marketplaces, gig economy, the world is changing and platforms give you opportunity to connect two different sides more easily and without hustle. We can develop any kind of platform you desire.',
+      },
+    },
+  },
 };
 
 export default getFlattenLocale(enLocale);

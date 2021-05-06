@@ -10,24 +10,27 @@ export const useStyles = makeStyles((theme: Theme) =>
     buttonClose: {
       display: 'flex',
       justifyContent: 'flex-end',
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         paddingRight: '12px',
       },
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up('md')]: {
         paddingRight: '21px',
       },
     },
     papper: {
       background: '#7c61af',
     },
+    backdropProps: {
+      background: 'transparent',
+    },
     root: {
       width: 0,
       height: '100%',
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         width: 290,
         paddingTop: '12px',
       },
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up('md')]: {
         width: 500,
         paddingTop: '28px',
       },
@@ -35,12 +38,37 @@ export const useStyles = makeStyles((theme: Theme) =>
       color: '#ffffff',
     },
     nested: {
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         paddingLeft: '24px',
       },
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up('md')]: {
         paddingLeft: '48px',
       },
+    },
+    languageSwitch: {
+      display: 'inline-block',
+      position: 'relative',
+      [theme.breakpoints.down('md')]: {
+        marginLeft: '24px',
+        marginTop: '12px',
+        marginBottom: '24px',
+      },
+      [theme.breakpoints.up('md')]: {
+        marginLeft: '48px',
+        marginTop: '18px',
+        marginBottom: '36px',
+      },
+    },
+    switchLabel: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+      zIndex: -1,
     },
   }),
 );
@@ -55,10 +83,10 @@ export const ListStyled = withStyles({
 export const ListItemStyled = withStyles(theme => ({
   root: {
     margin: 0,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       padding: '12px 23px',
     },
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       padding: '18px 33px 18px 48px',
     },
   },
@@ -73,10 +101,10 @@ export const ListItemTextStyled = withStyles({
 
 export const DividerStyled = withStyles(theme => ({
   root: {
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       margin: '12px 0',
     },
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       margin: '18px 0',
     },
   },

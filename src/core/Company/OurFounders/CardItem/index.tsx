@@ -12,7 +12,7 @@ function CardItem({ title, content, imageSrc, link }: FounderCardProps): ReactEl
   return (
     <Box display="flex" className={classes.root} flexDirection="column" justifyContent="space-between">
       <Grid container>
-        <Grid item md={12} sm={4} xs={12}>
+        <Grid item lg={12} md={4} sm={12} xs={12}>
           <Box component="div">
             <img src={imageSrc} alt="founders" />
           </Box>
@@ -20,7 +20,7 @@ function CardItem({ title, content, imageSrc, link }: FounderCardProps): ReactEl
             <FormattedMessage id={title} />
           </Typography>
         </Grid>
-        <Grid item md={12} sm={8} xs={12}>
+        <Grid item lg={12} md={8} sm={12} xs={12}>
           <Typography variant="body2" className={classes.content}>
             <FormattedMessage id={content} />
           </Typography>

@@ -6,7 +6,7 @@ import { Omit } from '@material-ui/types';
 import { ListItemLinkProps } from './interfaces';
 import { ListItemStyled, ListItemTextStyled } from './styles';
 
-function ListItemLink({ title, to, className }: ListItemLinkProps): ReactElement {
+function ListItemLink({ title, to, className, onClick }: ListItemLinkProps): ReactElement {
   const renderLink = React.useMemo(() => {
     const element = React.forwardRef<any, Omit<RouterLinkProps, 'to'>>((itemProps, ref) => (
       <RouterLink to={to} ref={ref} {...itemProps} />
@@ -17,7 +17,7 @@ function ListItemLink({ title, to, className }: ListItemLinkProps): ReactElement
 
   return (
     <li className={className}>
-      <ListItemStyled button component={renderLink}>
+      <ListItemStyled button component={renderLink} onClick={onClick}>
         <ListItemTextStyled primary={<FormattedMessage id={title} />} disableTypography />
       </ListItemStyled>
     </li>

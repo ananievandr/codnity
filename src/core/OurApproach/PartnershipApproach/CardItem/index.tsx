@@ -16,14 +16,15 @@ function CardItem({ title, subTitle, content, icon }: CardItemProps): ReactEleme
       display="flex"
       alignItems="flex-start"
       justifyContent="flex-start"
+      flexDirection="column"
       height="100%"
       className={classes.root}
     >
-      <div className={classes.iconWrapper}>
-        <IconCodnity name={icon} width="74px" height="54px" />
-      </div>
-      <Box component="div" display="flex" flexDirection="column" marginLeft="32px">
-        <Box component="div" marginBottom="24px">
+      <Box component="div" display="flex" className={classes.header}>
+        <div className={classes.iconWrapper}>
+          <IconCodnity name={icon} width="74px" height="54px" />
+        </div>
+        <Box component="div" className={classes.titleWrapper}>
           <Typography variant="subtitle2" className={classes.title}>
             <FormattedMessage id={title} />
           </Typography>
@@ -31,6 +32,8 @@ function CardItem({ title, subTitle, content, icon }: CardItemProps): ReactEleme
             <FormattedMessage id={subTitle} />
           </Typography>
         </Box>
+      </Box>
+      <Box component="div" className={classes.contentWrapper}>
         <Typography variant="body2" className={classes.content}>
           <FormattedMessage id={content} />
         </Typography>

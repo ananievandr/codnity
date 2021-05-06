@@ -15,28 +15,37 @@ export const useStyles = makeStyles((theme: Theme) =>
     menuButton: {
       marginRight: 0,
       color: '#000000',
+      [theme.breakpoints.between('md', 'lg')]: {
+        marginLeft: 52,
+      },
     },
     title: {
       display: 'none',
-      [theme.breakpoints.up('md')]: {
+      [theme.breakpoints.up('lg')]: {
         display: 'block',
       },
     },
     codnityLogo: {
-      [theme.breakpoints.up('md')]: {
+      [theme.breakpoints.up('lg')]: {
         marginRight: '80px',
       },
     },
     sectionDesktop: {
       display: 'none',
-      [theme.breakpoints.up('md')]: {
+      [theme.breakpoints.up('lg')]: {
         display: 'flex',
       },
     },
     sectionMobile: {
       display: 'flex',
-      [theme.breakpoints.up('md')]: {
+      [theme.breakpoints.up('lg')]: {
         display: 'none',
+      },
+    },
+    getInTouch: {
+      display: 'none',
+      [theme.breakpoints.up('md')]: {
+        display: 'flex',
       },
     },
   }),

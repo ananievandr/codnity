@@ -6,7 +6,7 @@ export const useStyles = makeStyles(theme =>
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      marginTop: '100px',
+      marginBottom: '100px',
     },
     paragraph: {
       marginBottom: 30,

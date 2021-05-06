@@ -4,6 +4,7 @@ import icCodnityLogo from '../icons/codnity-logo.svg';
 import icCodnityLogoWhite from '../icons/white/codnity-logo.svg';
 
 import icNavArrowViolet from '../icons/violet/ic-nav-arrow.svg';
+import icAttachment from '../icons/violet/ic-attachment.svg';
 
 import icInstagram from '../icons/social/instagram.svg';
 import icLinkedin from '../icons/social/linkedin.svg';
@@ -58,10 +59,20 @@ import icDevBriefcase from '../icons/development/ic-briefcase.svg';
 import icDevOfficeBuilding from '../icons/development/ic-office-building.svg';
 import icDevStartup from '../icons/development/ic-startup.svg';
 
+import icAngular from '../icons/software/ic-angular.svg';
+import icDjango from '../icons/software/ic-django.svg';
+import icGit from '../icons/software/ic-git.svg';
+import icGo from '../icons/software/ic-go.svg';
+import icJira from '../icons/software/ic-jira.svg';
+import icNodejs from '../icons/software/ic-nodejs.svg';
+import icPython from '../icons/software/ic-python.svg';
+import icReact from '../icons/software/ic-react.svg';
+
 export const mapPropsToIcons = {
   'codnity-logo': icCodnityLogo,
   'white:codnity-logo': icCodnityLogoWhite,
   'violet:nav-arrow': icNavArrowViolet,
+  'violet:attachment': icAttachment,
   'asset:hiring-people': icHiringPeople,
   'asset:blogging': icBlogging,
   'asset:approach': icGirlApproach,
@@ -100,6 +111,14 @@ export const mapPropsToIcons = {
   'dev:briefcase': icDevBriefcase,
   'dev:office-building': icDevOfficeBuilding,
   'dev:startup': icDevStartup,
+  'software:angular': icAngular,
+  'software:django': icDjango,
+  'software:git': icGit,
+  'software:go': icGo,
+  'software:jira': icJira,
+  'software:nodejs': icNodejs,
+  'software:python': icPython,
+  'software:react': icReact,
   'approach-1': icApproach1,
   'approach-2': icApproach2,
   'approach-3': icApproach3,

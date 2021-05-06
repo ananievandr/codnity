@@ -2,9 +2,11 @@ import React, { ReactElement } from 'react';
 import clsx from 'clsx';
 import { Box, Grid, Typography } from '@material-ui/core';
 
-import { useStyles } from './styles';
 import { IconCodnity } from 'uikit/IconCodnity';
 import { IconSizes } from 'uikit/IconCodnity/constants';
+import { SectionHeader } from 'uikit/SectionHeader';
+
+import { useStyles } from './styles';
 
 function Stats(): ReactElement {
   const classes = useStyles();
@@ -27,11 +29,11 @@ function Stats(): ReactElement {
   ];
   return (
     <Grid container className={classes.root} direction="column">
-      <Typography variant="h1">We’re excited about building the future</Typography>
+      <SectionHeader title="We’re excited about [building the future]" />
       <Box component="div" width="100%" className={classes.border}>
         <Grid container justify="center">
           {array.map((item, i) => (
-            <Grid item md={4} sm={4} xs={12} key={i}>
+            <Grid item md={4} sm={12} key={i}>
               <Box
                 component="div"
                 display="flex"

@@ -19,21 +19,21 @@ function Footer({ onHeightReady }: FooterProps): ReactElement {
       <footer className={classes.footer}>
         <Container maxWidth="lg" className={classes.root}>
           <Grid container alignContent="space-between" spacing={4}>
-            <Grid item sm={6} xs={12}>
+            <Grid item md={6} sm={12}>
               <Grid container spacing={2}>
-                <Grid item md={4} sm={12}>
+                <Grid item lg={4} md={12}>
                   <IconCodnity name="white:codnity-logo" width="122px" height="36px" />
                 </Grid>
-                <Grid item md={6} sm={12}>
+                <Grid item lg={6} md={10}>
                   <Typography variant="body1" color="inherit">
                     <FormattedMessage id="footer.description" />
                   </Typography>
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item sm={6} xs={12} className={classes.links}>
+            <Grid item md={6} sm={12} className={classes.links}>
               <Grid container>
-                <Grid item md={6} sm={5} xs={6} className={classes.gridLinks}>
+                <Grid item lg={6} md={4} sm={6} xs={6} className={classes.gridLinks}>
                   <ListStyled>
                     <ListItemLink to={Routes.services} title="navigation.services" />
                     <ListItemLink to={Routes.expertise} title="navigation.expertise" />
@@ -41,15 +41,15 @@ function Footer({ onHeightReady }: FooterProps): ReactElement {
                     <ListItemLink to={Routes.company} title="navigation.company" />
                   </ListStyled>
                 </Grid>
-                <Grid item md={6} sm={7} xs={6}>
+                <Grid item lg={6} md={8} sm={6} xs={6}>
                   <Grid container>
-                    <Grid item sm={6} xs={12} className={classes.gridLinksMiddleColumn}>
+                    <Grid item md={6} sm={12} xs={12} className={classes.gridLinksMiddleColumn}>
                       <ListStyled>
                         <ListItemLink to={Routes.career} title="navigation.career" />
                         <ListItemLink to={Routes.insights} title="navigation.insights" />
                       </ListStyled>
                     </Grid>
-                    <Grid item sm={6} xs={12} className={classes.gridLinks}>
+                    <Grid item md={6} sm={12} xs={12} className={classes.gridLinks}>
                       <ListStyled>
                         <ListItemLink to={Routes.main} title="navigation.terms" />
                         <ListItemLink to={Routes.main} title="navigation.privacyPolicy" />
@@ -62,12 +62,12 @@ function Footer({ onHeightReady }: FooterProps): ReactElement {
           </Grid>
           <DividerStyled />
           <Grid container className={classes.copyrightSection}>
-            <Grid item sm={6} xs={12}>
+            <Grid item md={6} sm={12}>
               <Typography variant="body1" color="inherit">
                 Copyright @ 2021 Codnity
               </Typography>
             </Grid>
-            <Grid item sm={6} xs={12}>
+            <Grid item md={6} sm={12}>
               <Grid container className={classes.socials}>
                 <IconCodnity name="ic-linkedin" className={classes.networkItem} />
                 <IconCodnity name="ic-facebook" className={classes.networkItem} />

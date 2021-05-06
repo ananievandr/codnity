@@ -1,6 +1,8 @@
 import React, { ReactElement } from 'react';
 import { Grid, Typography } from '@material-ui/core';
 
+import { SectionHeader } from 'uikit/SectionHeader';
+
 import { useStyles } from './styles';
 import { CardItem } from './CardItem';
 
@@ -8,7 +10,7 @@ function OurValues(): ReactElement {
   const classes = useStyles();
   return (
     <Grid container className={classes.root} direction="column">
-      <Typography variant="h1">Our values</Typography>
+      <SectionHeader title="Our [values]" />
       <Typography variant="body2" className={classes.paragraph}>
         Each our team member is different, but we all go along with these values and always are looking for them in our
         next chap in Codnity:

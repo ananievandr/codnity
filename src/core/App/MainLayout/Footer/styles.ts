@@ -26,18 +26,22 @@ export const useStyles = makeStyles(theme =>
       backgroundColor: '#7c61af',
     },
     links: {
+      [theme.breakpoints.down('md')]: {
+        width: '100%',
+      },
       [theme.breakpoints.down('xs')]: {
         marginTop: '8px',
+        width: '100%',
       },
     },
     gridLinks: {
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up('md')]: {
         display: 'flex',
         justifyContent: 'flex-end',
       },
     },
     gridLinksMiddleColumn: {
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up('md')]: {
         display: 'flex',
         justifyContent: 'space-around',
       },
@@ -58,13 +62,13 @@ export const useStyles = makeStyles(theme =>
       },
     },
     networkItem: {
-      [theme.breakpoints.between('xs', 'sm')]: {
-        margin: '0 35px',
+      [theme.breakpoints.down('md')]: {
+        margin: '0 26px',
       },
-      [theme.breakpoints.between('sm', 'md')]: {
+      [theme.breakpoints.between('md', 'lg')]: {
         margin: '0 16px',
       },
-      [theme.breakpoints.up('md')]: {
+      [theme.breakpoints.up('lg')]: {
         margin: '0 10px',
       },
     },

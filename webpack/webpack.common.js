@@ -32,9 +32,9 @@ module.exports = {
       template: environment.paths.htmlSrc,
     }),
     new CopyWebpackPlugin([{
-      from: environment.paths.assetsSrc,
-      to: environment.paths.assetsDistSrc,
-      context: path.resolve(__dirname, '../public', 'assets'),
+      from: environment.paths.staticSrc,
+      to: environment.paths.staticDistSrc,
+      context: path.resolve(__dirname, '../public', 'static'),
     }]),
   ],
   module: {

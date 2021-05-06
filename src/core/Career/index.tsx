@@ -3,6 +3,8 @@ import { Grid, Typography } from '@material-ui/core';
 import clsx from 'clsx';
 
 import { IconCodnity } from 'uikit/IconCodnity';
+import { SectionHeader } from 'uikit/SectionHeader';
+import withScrollToTop from 'hocs/ScrollToTop';
 
 import { useStyles } from './styles';
 
@@ -10,8 +12,8 @@ function Career(): ReactElement {
   const classes = useStyles();
   return (
     <Grid container className={classes.root}>
-      <Grid item md={6} sm={12}>
-        <Typography variant="h1">Start career at Codnity</Typography>
+      <Grid item lg={6} md={12}>
+        <SectionHeader title="[Start career] at Codnity" />
         <div className={classes.textBlock}>
           <Typography variant="body2" className={classes.paragraph}>
             If you want to have a kick ass career, understand business, and around what the world is spinning, also you
@@ -33,11 +35,11 @@ function Career(): ReactElement {
           </Typography>
         </div>
       </Grid>
-      <Grid item md={6} sm={12}>
-        <IconCodnity className={classes.icon} name="asset:hiring-people" width="100%" height="100%" />
+      <Grid item lg={6} md={12}>
+        <IconCodnity name="asset:hiring-people" width="100%" height="100%" />
       </Grid>
     </Grid>
   );
 }
 
-export { Career };
+export default withScrollToTop(Career);

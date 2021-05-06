@@ -5,9 +5,12 @@ export const useStyles = makeStyles(theme =>
     root: {
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center',
-      [theme.breakpoints.down('sm')]: {
-        textAlign: 'center',
+      justifyContent: 'space-between',
+      [theme.breakpoints.down('md')]: {
+        justifyContent: 'center',
+      },
+      [theme.breakpoints.up('lg')]: {
+        height: 'calc(100vh - 80px)',
       },
     },
     button: {
@@ -19,9 +22,20 @@ export const useStyles = makeStyles(theme =>
         backgroundColor: 'rgba(91, 57, 155, 0.7)',
       },
     },
-    icon: {
-      minWidth: 440,
-      minHeight: 330,
+    titleBox: {
+      [theme.breakpoints.up('md')]: {
+        maxWidth: 550,
+      },
+      [theme.breakpoints.down('md')]: {
+        maxWidth: 480,
+        textAlign: 'center',
+      },
+    },
+    gridTitle: {
+      [theme.breakpoints.down('lg')]: {
+        display: 'flex',
+        justifyContent: 'center',
+      },
     },
   }),
 );

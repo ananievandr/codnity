@@ -1,5 +1,7 @@
 import React, { ReactElement } from 'react';
-import { Box, Typography, Grid } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
+
+import { SectionHeader } from 'uikit/SectionHeader';
 
 import { useStyles } from './styles';
 import { CardItem } from './CardItem';
@@ -57,9 +59,7 @@ function Technologies(): ReactElement {
       flexDirection="column"
       width="100%"
     >
-      <Typography variant="h1" className={classes.title}>
-        Diverse technologies
-      </Typography>
+      <SectionHeader className={classes.title} title="Diverse [technologies]" />
       <Grid container spacing={1}>
         {array.map((item, i) => (
           <Grid key={i} className={classes.gridItem}>

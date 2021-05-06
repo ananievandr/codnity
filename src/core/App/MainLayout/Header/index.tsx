@@ -52,6 +52,8 @@ function Header(props: Props): ReactElement {
                 <ButtonRouterLink to={Routes.ourAproach} title="navigation.ourApproach" />
                 <ButtonRouterLink to={Routes.company} title="navigation.company" />
                 <LanguageMenu />
+              </div>
+              <div className={classes.getInTouch}>
                 <ButtonRouter to={Routes.getInTouch} title="navigation.getInTouch" />
               </div>
               <div className={classes.sectionMobile}>

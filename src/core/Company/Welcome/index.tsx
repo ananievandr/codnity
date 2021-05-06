@@ -1,15 +1,17 @@
 import React, { ReactElement } from 'react';
 import { Grid, Typography } from '@material-ui/core';
 
-import { useStyles } from './styles';
+import { SectionHeader } from 'uikit/SectionHeader';
 import { IconCodnity } from 'uikit/IconCodnity';
+
+import { useStyles } from './styles';
 
 function Welcome(): ReactElement {
   const classes = useStyles();
   return (
     <Grid container className={classes.root}>
-      <Grid item md={6} sm={12}>
-        <Typography variant="h1">Who we are</Typography>
+      <Grid item lg={6} md={12}>
+        <SectionHeader title="[Who] we are" />
         <div className={classes.textBlock}>
           <Typography variant="body2" className={classes.paragraph}>
             Codnity Group is located in Latvia. Latvia is globally known with it's high quality workforce which is
@@ -25,8 +27,8 @@ function Welcome(): ReactElement {
           </Typography>
         </div>
       </Grid>
-      <Grid item md={6} sm={12}>
-        <IconCodnity className={classes.icon} name="asset:blogging" width="100%" height="100%" />
+      <Grid item lg={6} md={12}>
+        <IconCodnity name="asset:blogging" width="100%" height="100%" />
       </Grid>
     </Grid>
   );

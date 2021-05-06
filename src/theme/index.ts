@@ -4,11 +4,14 @@ const theme = createMuiTheme({
   breakpoints: {
     values: {
       xs: 0,
-      sm: 768,
-      md: 960,
-      lg: 1280,
+      sm: 375,
+      md: 768,
+      lg: 1440,
       xl: 1920,
     },
+  },
+  typography: {
+    fontFamily: 'DM Sans',
   },
   overrides: {
     MuiCssBaseline: {
@@ -25,8 +28,28 @@ const theme = createMuiTheme({
         },
       },
     },
+    MuiContainer: {
+      root: {
+        '@media screen and (device-width: 768px)': {
+          paddingLeft: 24,
+          paddingRight: 24,
+        },
+        '@media screen and (device-width: 1440px)': {
+          paddingLeft: 100,
+          paddingRight: 100,
+        },
+      },
+    },
   },
 });
+
+theme.typography.body1 = {
+  ...theme.typography.body1,
+  fontSize: '14px',
+  lineHeight: '21px',
+  letterSpacing: '0.01em',
+  fontWeight: 500,
+};
 
 theme.typography.body2 = {
   ...theme.typography.body2,
@@ -34,9 +57,17 @@ theme.typography.body2 = {
   lineHeight: '24px',
   letterSpacing: '0.01em',
   color: `#212121`,
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     fontSize: '14px',
   },
+};
+
+theme.typography.subtitle1 = {
+  ...theme.typography.subtitle1,
+  fontWeight: 'normal',
+  letterSpacing: '0.01em',
+  fontSize: '14px',
+  lineHeight: '24px',
 };
 
 theme.typography.subtitle2 = {
@@ -55,15 +86,15 @@ theme.typography.h1 = {
   letterSpacing: '0.01em',
   color: '#212121',
   display: 'inline-block',
-  marginBottom: 32,
-  [theme.breakpoints.between('md', 'sm')]: {
+  marginBottom: 48,
+  [theme.breakpoints.between('lg', 'md')]: {
     fontSize: '32px',
     lineHeight: '44px',
-    marginBottom: 22,
+    marginBottom: 32,
   },
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     fontSize: '24px',
-    lineHeight: '44px',
+    lineHeight: '36px',
     marginBottom: 24,
   },
 };
@@ -75,7 +106,7 @@ theme.typography.h6 = {
   lineHeight: '22px',
   letterSpacing: '0.01em',
   color: '#5B399B',
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     fontSize: '18px',
   },
 };

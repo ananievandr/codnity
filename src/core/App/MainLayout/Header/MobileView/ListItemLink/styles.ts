@@ -5,10 +5,10 @@ import { withStyles } from '@material-ui/styles';
 export const ListItemStyled = withStyles(theme => ({
   root: {
     margin: 0,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       padding: '12px 23px',
     },
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       padding: '18px 33px 18px 48px',
     },
   },

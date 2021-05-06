@@ -15,5 +15,9 @@ export const ListItemTextStyled = withStyles({
     margin: 0,
     padding: 0,
     color: '#ffffff',
+    fontWeight: 500,
+    fontSize: '14px',
+    lineHeight: '24px',
+    letterSpacing: '0.01em',
   },
 })(ListItemText);

@@ -1,15 +1,15 @@
 import React, { ReactElement } from 'react';
 import { Route, Switch } from 'react-router';
 
-import { Main } from 'core/Main';
-import { Career } from 'core/Career';
+import Main from 'core/Main';
+import Career from 'core/Career';
 import { Insights } from 'core/Insights';
 import { Routes } from 'utils/constants/Routes';
-import { Services } from 'core/Services';
-import { Expertise } from 'core/Expertise';
-import { OurApproach } from 'core/OurApproach';
-import { Company } from 'core/Company';
-import { GetInTouch } from 'core/GetInTouch';
+import Services from 'core/Services';
+import Expertise from 'core/Expertise';
+import OurApproach from 'core/OurApproach';
+import Company from 'core/Company';
+import GetInTouch from 'core/GetInTouch';
 
 function LayoutRoutes(): ReactElement {
   return (

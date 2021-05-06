@@ -1,4 +1,5 @@
 import icEmpty from '../icons/ic-empty.svg';
+import icMenu from '../icons/ic-menu.svg';
 
 import icCodnityLogo from '../icons/codnity-logo.svg';
 import icCodnityLogoWhite from '../icons/white/codnity-logo.svg';
@@ -112,5 +113,6 @@ export const mapPropsToIcons = {
   'ic-linkedin': icLinkedin,
   'ic-facebook': icFacebook,
   'ic-empty': icEmpty,
+  'ic-menu': icMenu,
   ...softwareMapPropsToIcons,
 };

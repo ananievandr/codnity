@@ -15,6 +15,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     menuButton: {
       marginRight: 0,
       color: '#000000',
+      padding: 0,
       [theme.breakpoints.between('md', 'lg')]: {
         marginLeft: 52,
       },

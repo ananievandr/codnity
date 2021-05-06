@@ -25,11 +25,23 @@ export const useStyles = makeStyles(theme =>
       [theme.breakpoints.up('md')]: {
         marginBottom: 100,
       },
-      [theme.breakpoints.between('md', 'sm')]: {
+      [theme.breakpoints.down('md')]: {
         marginBottom: 80,
+        '&:nth-child(2n)': {
+          paddingLeft: 16,
+        },
+        '&:nth-child(2n - 1)': {
+          paddingRight: 16,
+        },
       },
       [theme.breakpoints.down('sm')]: {
         marginBottom: 60,
+        '&:nth-child(2n)': {
+          paddingLeft: 8,
+        },
+        '&:nth-child(2n - 1)': {
+          paddingRight: 8,
+        },
       },
     },
   }),

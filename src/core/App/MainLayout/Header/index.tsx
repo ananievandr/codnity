@@ -2,7 +2,6 @@ import React, { ReactElement } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import Container from '@material-ui/core/Container';
 import { NavLink } from 'react-router-dom';
 
@@ -17,6 +16,7 @@ import { MobileView } from './MobileView';
 import { ButtonRouterLink } from './ButtonRouterLink';
 import { ExpertiseMenu } from './ExpertiseMenu';
 import { LanguageMenu } from './LanguageMenu';
+import { IconSizes } from 'uikit/IconCodnity/constants';
 
 function Header(props: Props): ReactElement {
   const classes = useStyles();
@@ -65,7 +65,7 @@ function Header(props: Props): ReactElement {
                   color="inherit"
                   aria-label="open drawer"
                 >
-                  <MenuIcon />
+                  <IconCodnity name="ic-menu" size={IconSizes.md32} />
                 </IconButton>
               </div>
             </Toolbar>

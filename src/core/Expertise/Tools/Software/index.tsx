@@ -13,14 +13,12 @@ function Software(): ReactElement {
 
   const onMouseEnterHandle = (itemKey: string) => {
     setHover({
-      ...hover,
       [itemKey]: true,
     });
   };
 
   const onMouseLeaveHandle = (itemKey: string) => {
     setHover({
-      ...hover,
       [itemKey]: false,
     });
   };
@@ -30,7 +28,7 @@ function Software(): ReactElement {
       {softwareList.map((item, i) => (
         <Box
           component="div"
-          className={clsx(classes.rounded, item.className)}
+          className={clsx(classes.rounded, item.className, { [classes.active]: hover[item.text] })}
           onMouseEnter={() => onMouseEnterHandle(item.text)}
           onMouseLeave={() => onMouseLeaveHandle(item.text)}
           key={i}
@@ -38,7 +36,7 @@ function Software(): ReactElement {
           {hover[item.text] ? (
             <div className={classes.hoverItem}>{item.text}</div>
           ) : (
-            <IconCodnity name={item.iconName} size={item.iconSize} />
+            <IconCodnity name={item.iconName} width="100%" height="100%" />
           )}
         </Box>
       ))}

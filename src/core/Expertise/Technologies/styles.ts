@@ -25,9 +25,25 @@ export const useStyles = makeStyles(theme =>
     title: {
       textAlign: 'center',
     },
+    gridContainer: {
+      [theme.breakpoints.down('sm')]: {
+        justifyContent: 'space-between',
+      },
+    },
     gridItem: {
       marginRight: 8,
       marginBottom: 8,
+      [theme.breakpoints.down('md')]: {
+        '&:nth-child(3n)': {
+          marginRight: 0,
+        },
+      },
+      [theme.breakpoints.down('sm')]: {
+        '&:nth-child(2n)': {
+          marginRight: 0,
+          marginBottom: 11,
+        },
+      },
     },
   }),
 );

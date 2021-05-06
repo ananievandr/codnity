@@ -15,10 +15,11 @@ export const getStyles = makeStyles(theme =>
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      '&:hover': {
+      '&:hover, &$active': {
         background: '#7C61AF',
       },
     },
+    active: {},
     hoverItem: {
       color: '#ffffff',
       fontWeight: 'bold',
@@ -35,9 +36,11 @@ export const getStyles = makeStyles(theme =>
       top: '20%',
       width: 91,
       height: 91,
+      padding: 18,
       [theme.breakpoints.down('sm')]: {
         width: 60,
         height: 60,
+        padding: 8,
       },
     },
     js: {
@@ -46,6 +49,7 @@ export const getStyles = makeStyles(theme =>
       bottom: '20%',
       width: 53,
       height: 53,
+      padding: '14px',
     },
     python: {
       position: 'absolute',
@@ -53,17 +57,20 @@ export const getStyles = makeStyles(theme =>
       top: 0,
       width: 91,
       height: 91,
+      padding: 16,
       [theme.breakpoints.down('sm')]: {
         width: 45,
         height: 45,
+        padding: 8,
       },
     },
     django: {
       position: 'absolute',
-      left: '15%',
-      top: '45%',
+      left: '16%',
+      top: '43%',
       width: 67,
       height: 67,
+      padding: 16,
       [theme.breakpoints.down('sm')]: {
         left: '5%',
         top: '40%',
@@ -75,18 +82,21 @@ export const getStyles = makeStyles(theme =>
       bottom: '3%',
       width: 90,
       height: 90,
+      padding: '14px',
       [theme.breakpoints.down('sm')]: {
         width: 60,
         height: 60,
         left: '13%',
+        padding: 6,
       },
     },
     oracle: {
       position: 'absolute',
-      left: '30%',
-      top: '5%',
+      left: '33%',
+      top: '10%',
       width: 100,
       height: 100,
+      padding: '5px',
       [theme.breakpoints.down('sm')]: {
         width: 50,
         height: 50,
@@ -99,13 +109,19 @@ export const getStyles = makeStyles(theme =>
       top: '55%',
       width: 59,
       height: 59,
+      padding: '14px',
+      [theme.breakpoints.down('sm')]: {
+        left: '26%',
+        top: '62%',
+      },
     },
     cat: {
       position: 'absolute',
-      left: '41%',
-      top: '30%',
+      left: '63%',
+      top: '27%',
       width: 50,
       height: 50,
+      padding: '10px',
       [theme.breakpoints.down('sm')]: {
         left: '26%',
         top: '26%',
@@ -117,22 +133,27 @@ export const getStyles = makeStyles(theme =>
       bottom: '5%',
       width: 81,
       height: 81,
+      padding: 17,
       [theme.breakpoints.down('sm')]: {
         width: 55,
         height: 55,
         left: '36%',
+        padding: 8,
       },
     },
     postgresql: {
       position: 'absolute',
-      left: '48%',
-      top: '40%',
+      left: '46%',
+      top: '35%',
       width: 91,
       height: 91,
+      padding: 18,
       [theme.breakpoints.down('sm')]: {
         width: 50,
         height: 50,
-        left: '40%',
+        top: '45%',
+        left: '33%',
+        padding: 8,
       },
     },
     material: {
@@ -141,6 +162,7 @@ export const getStyles = makeStyles(theme =>
       top: 0,
       width: 74,
       height: 74,
+      padding: 14,
     },
     php: {
       position: 'absolute',
@@ -148,9 +170,12 @@ export const getStyles = makeStyles(theme =>
       bottom: 0,
       width: 110,
       height: 110,
+      padding: 15,
       [theme.breakpoints.down('sm')]: {
         width: 55,
         height: 55,
+        padding: 4,
+        left: '58%',
       },
     },
     kubernetes: {
@@ -159,9 +184,12 @@ export const getStyles = makeStyles(theme =>
       top: '50%',
       width: 74,
       height: 74,
+      padding: 11,
       [theme.breakpoints.down('sm')]: {
         width: 60,
         height: 60,
+        right: '27%',
+        top: '44%',
       },
     },
     react: {
@@ -170,22 +198,25 @@ export const getStyles = makeStyles(theme =>
       top: '5%',
       width: 59,
       height: 59,
+      padding: 7,
       [theme.breakpoints.down('sm')]: {
-        right: '25%',
+        right: '29%',
         top: '23%',
       },
     },
     laravel: {
       position: 'absolute',
-      right: '15%',
+      right: '13%',
       top: '35%',
       width: 81,
       height: 81,
+      padding: 12,
       [theme.breakpoints.down('sm')]: {
         width: 40,
         height: 40,
         right: '5%',
         top: '35%',
+        padding: 6,
       },
     },
     nix: {
@@ -194,11 +225,12 @@ export const getStyles = makeStyles(theme =>
       bottom: '10%',
       width: 81,
       height: 81,
+      padding: 12,
       [theme.breakpoints.down('sm')]: {
         width: 65,
         height: 65,
-        bottom: '16%',
-        right: '25%',
+        bottom: '19%',
+        right: '28%',
       },
     },
     docker: {
@@ -207,10 +239,12 @@ export const getStyles = makeStyles(theme =>
       top: '5%',
       width: 91,
       height: 91,
+      padding: 12,
       [theme.breakpoints.down('sm')]: {
         width: 45,
         height: 45,
         top: '15%',
+        padding: 5,
       },
     },
     mariadb: {
@@ -219,6 +253,7 @@ export const getStyles = makeStyles(theme =>
       top: '50%',
       width: 74,
       height: 74,
+      padding: 14,
     },
     bitbucket: {
       position: 'absolute',
@@ -226,6 +261,11 @@ export const getStyles = makeStyles(theme =>
       bottom: '5%',
       width: 58,
       height: 58,
+      padding: 9,
+      [theme.breakpoints.down('sm')]: {
+        right: '5%',
+        bottom: '10%',
+      },
     },
   }),
 );

@@ -3,7 +3,7 @@ import { createStyles, makeStyles } from '@material-ui/core/styles';
 export const getStyles = makeStyles(theme =>
   createStyles({
     root: {
-      height: 365,
+      height: 350,
       [theme.breakpoints.down('md')]: {
         height: 200,
       },
@@ -16,10 +16,11 @@ export const getStyles = makeStyles(theme =>
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      '&:hover': {
+      '&:hover, &$active': {
         background: '#7C61AF',
       },
     },
+    active: {},
     hoverItem: {
       color: '#ffffff',
       fontWeight: 'bold',
@@ -36,6 +37,7 @@ export const getStyles = makeStyles(theme =>
       top: '5%',
       width: 103,
       height: 103,
+      padding: 14,
       [theme.breakpoints.down('md')]: {
         width: 77,
         height: 77,
@@ -43,6 +45,7 @@ export const getStyles = makeStyles(theme =>
       [theme.breakpoints.down('sm')]: {
         width: 56,
         height: 56,
+        padding: 6,
       },
     },
     itemB: {
@@ -51,6 +54,7 @@ export const getStyles = makeStyles(theme =>
       bottom: '3%',
       width: 80,
       height: 80,
+      padding: 17,
       [theme.breakpoints.down('md')]: {
         width: 65,
         height: 65,
@@ -58,6 +62,7 @@ export const getStyles = makeStyles(theme =>
       [theme.breakpoints.down('sm')]: {
         width: 45,
         height: 45,
+        padding: 6,
       },
     },
     itemC: {
@@ -66,6 +71,7 @@ export const getStyles = makeStyles(theme =>
       top: '43%',
       width: 90,
       height: 90,
+      padding: 23,
       [theme.breakpoints.down('md')]: {
         width: 74,
         height: 74,
@@ -73,6 +79,7 @@ export const getStyles = makeStyles(theme =>
       [theme.breakpoints.down('sm')]: {
         width: 50,
         height: 50,
+        padding: 6,
       },
     },
     itemD: {
@@ -81,6 +88,7 @@ export const getStyles = makeStyles(theme =>
       top: 0,
       width: 103,
       height: 103,
+      padding: 14,
       [theme.breakpoints.down('md')]: {
         width: 77,
         height: 77,
@@ -88,6 +96,7 @@ export const getStyles = makeStyles(theme =>
       [theme.breakpoints.down('sm')]: {
         width: 54,
         height: 54,
+        padding: 6,
       },
     },
     itemE: {
@@ -96,9 +105,11 @@ export const getStyles = makeStyles(theme =>
       bottom: 0,
       width: 77,
       height: 77,
+      padding: 16,
       [theme.breakpoints.down('sm')]: {
         width: 44,
         height: 44,
+        padding: 6,
       },
     },
     itemF: {
@@ -107,13 +118,18 @@ export const getStyles = makeStyles(theme =>
       top: '35%',
       width: 100,
       height: 100,
+      padding: 22,
       [theme.breakpoints.down('md')]: {
         width: 88,
         height: 88,
+        right: '20%',
+        top: '25%',
       },
       [theme.breakpoints.down('sm')]: {
         width: 56,
         height: 56,
+        padding: 6,
+        right: '24%',
       },
     },
     itemG: {
@@ -122,21 +138,25 @@ export const getStyles = makeStyles(theme =>
       top: '3%',
       width: 113,
       height: 113,
+      padding: 35,
       [theme.breakpoints.down('md')]: {
         width: 71,
         height: 71,
+        padding: 8,
       },
       [theme.breakpoints.down('sm')]: {
         width: 58,
         height: 58,
+        padding: 6,
       },
     },
     itemH: {
       position: 'absolute',
-      right: '4%',
-      bottom: '8%',
+      right: '2%',
+      bottom: '5%',
       width: 90,
       height: 90,
+      padding: 18,
       [theme.breakpoints.down('md')]: {
         width: 68,
         height: 68,
@@ -144,6 +164,7 @@ export const getStyles = makeStyles(theme =>
       [theme.breakpoints.down('sm')]: {
         width: 50,
         height: 50,
+        padding: 6,
       },
     },
   }),

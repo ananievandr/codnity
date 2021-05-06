@@ -60,7 +60,7 @@ function Technologies(): ReactElement {
       width="100%"
     >
       <SectionHeader className={classes.title} title="Diverse [technologies]" />
-      <Grid container spacing={1}>
+      <Grid container spacing={1} className={classes.gridContainer}>
         {array.map((item, i) => (
           <Grid key={i} className={classes.gridItem}>
             <CardItem title={item.title} icon={item.icon} />

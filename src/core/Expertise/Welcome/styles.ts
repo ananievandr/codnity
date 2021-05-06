@@ -7,9 +7,10 @@ export const useStyles = makeStyles(theme =>
       alignItems: 'center',
       justifyContent: 'space-between',
       [theme.breakpoints.down('md')]: {
+        justifyContent: 'center',
         textAlign: 'center',
       },
-      [theme.breakpoints.up('lg')]: {
+      [theme.breakpoints.up('md')]: {
         height: 'calc(100vh - 80px)',
       },
     },

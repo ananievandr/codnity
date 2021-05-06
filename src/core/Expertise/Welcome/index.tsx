@@ -10,10 +10,10 @@ function Welcome(): ReactElement {
   const classes = useStyles();
   return (
     <Grid container className={classes.root} alignItems="center">
-      <Grid item md={6} sm={12} className={classes.title}>
+      <Grid item lg={6} md={12} sm={12} className={classes.title}>
         <SectionHeader title="Our [competencies] generate positive business outcomes" />
       </Grid>
-      <Grid item md={6} sm={12}>
+      <Grid item lg={6} md={12} sm={12}>
         <IconCodnity name="asset:brainstorming" width="100%" height="100%" />
       </Grid>
     </Grid>

@@ -8,7 +8,15 @@ import { useStyles } from './styles';
 function Tools(): ReactElement {
   const classes = useStyles();
   return (
-    <Box component="div" display="flex" flexDirection="column" alignItems="center" justifyContent="center" width="100%">
+    <Box
+      component="div"
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
+      width="100%"
+      marginBottom="60px"
+    >
       <SectionHeader title="Practices and [tools]" />
       <Typography variant="body2" className={classes.paragraph}>
         In our development processes, we use tools and practices that contribute to the success of our projects and

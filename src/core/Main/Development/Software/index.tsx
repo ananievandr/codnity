@@ -39,7 +39,7 @@ function Software(): ReactElement {
           {hover[item.text] ? (
             <div className={classes.hoverItem}>{item.text}</div>
           ) : (
-            <IconCodnity name={item.iconName} size={IconSizes.md32} />
+            <IconCodnity name={item.iconName} size={item.iconSize} />
           )}
         </Box>
       ))}

@@ -13,7 +13,7 @@ import { App } from 'core/App';
 
 const root = document.getElementById('aka-codnity');
 render(
-  <BrowserRouter basename="/codnity-demo">
+  <BrowserRouter>
     <App />
   </BrowserRouter>,
   root,

@@ -59,14 +59,7 @@ import icDevBriefcase from '../icons/development/ic-briefcase.svg';
 import icDevOfficeBuilding from '../icons/development/ic-office-building.svg';
 import icDevStartup from '../icons/development/ic-startup.svg';
 
-import icAngular from '../icons/software/ic-angular.svg';
-import icDjango from '../icons/software/ic-django.svg';
-import icGit from '../icons/software/ic-git.svg';
-import icGo from '../icons/software/ic-go.svg';
-import icJira from '../icons/software/ic-jira.svg';
-import icNodejs from '../icons/software/ic-nodejs.svg';
-import icPython from '../icons/software/ic-python.svg';
-import icReact from '../icons/software/ic-react.svg';
+import { softwareMapPropsToIcons } from './mapper/software';
 
 export const mapPropsToIcons = {
   'codnity-logo': icCodnityLogo,
@@ -111,14 +104,6 @@ export const mapPropsToIcons = {
   'dev:briefcase': icDevBriefcase,
   'dev:office-building': icDevOfficeBuilding,
   'dev:startup': icDevStartup,
-  'software:angular': icAngular,
-  'software:django': icDjango,
-  'software:git': icGit,
-  'software:go': icGo,
-  'software:jira': icJira,
-  'software:nodejs': icNodejs,
-  'software:python': icPython,
-  'software:react': icReact,
   'approach-1': icApproach1,
   'approach-2': icApproach2,
   'approach-3': icApproach3,
@@ -127,4 +112,5 @@ export const mapPropsToIcons = {
   'ic-linkedin': icLinkedin,
   'ic-facebook': icFacebook,
   'ic-empty': icEmpty,
+  ...softwareMapPropsToIcons,
 };

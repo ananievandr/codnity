@@ -5,51 +5,10 @@ import { SectionHeader } from 'uikit/SectionHeader';
 
 import { useStyles } from './styles';
 import { CardItem } from './CardItem';
+import { cardList } from './constants';
 
 function Technologies(): ReactElement {
   const classes = useStyles();
-  const array = [
-    {
-      title: 'Frontend',
-      icon: 'technology:brush',
-    },
-    {
-      title: 'Backend',
-      icon: 'technology:technology-settings',
-    },
-    {
-      title: 'Databases',
-      icon: 'technology:database',
-    },
-    {
-      title: 'Third-party-services',
-      icon: 'technology:device-hub',
-    },
-    {
-      title: 'Payments',
-      icon: 'technology:wallet',
-    },
-    {
-      title: 'iOS',
-      icon: 'technology:iphone',
-    },
-    {
-      title: 'Android',
-      icon: 'technology:android',
-    },
-    {
-      title: 'Analytics',
-      icon: 'technology:graph-bar',
-    },
-    {
-      title: 'DevOps',
-      icon: 'technology:infinity',
-    },
-    {
-      title: 'Testing',
-      icon: 'technology:mobile-friendly',
-    },
-  ];
   return (
     <Box
       component="div"
@@ -61,8 +20,8 @@ function Technologies(): ReactElement {
     >
       <SectionHeader className={classes.title} title="Diverse [technologies]" />
       <Grid container spacing={1} className={classes.gridContainer}>
-        {array.map((item, i) => (
-          <Grid key={i} className={classes.gridItem}>
+        {cardList.map((item, i) => (
+          <Grid item lg={3} md={4} sm={6} xs={6} key={i} className={classes.gridItem}>
             <CardItem title={item.title} icon={item.icon} />
           </Grid>
         ))}

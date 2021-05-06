@@ -10,16 +10,10 @@ export const useStyles = makeStyles(theme =>
       flexDirection: 'column',
       justifyContent: 'space-between',
       cursor: 'pointer',
-      [theme.breakpoints.up('md')]: {
-        width: 240,
-        height: 141,
-      },
-      [theme.breakpoints.down('md')]: {
-        width: 235,
+      [theme.breakpoints.up('sm')]: {
         height: 141,
       },
       [theme.breakpoints.down('sm')]: {
-        width: 160,
         height: 115,
       },
       '&:hover': {

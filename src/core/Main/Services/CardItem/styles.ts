@@ -8,6 +8,7 @@ export const useStyles = makeStyles(theme =>
       cursor: 'pointer',
       [theme.breakpoints.down('sm')]: {
         padding: 20,
+        minWidth: 233,
       },
       '&:hover': {
         boxShadow: '0px 8px 22px -6px rgba(24, 39, 75, 0.12), 0px 14px 64px -4px rgba(24, 39, 75, 0.12)',

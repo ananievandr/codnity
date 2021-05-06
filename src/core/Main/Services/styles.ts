@@ -16,6 +16,12 @@ export const useStyles = makeStyles(theme =>
         marginBottom: 100,
       },
     },
+    gridContainer: {
+      [theme.breakpoints.down('sm')]: {
+        flexWrap: 'nowrap',
+        overflowX: 'auto',
+      },
+    },
     paragraph: {
       marginBottom: 48,
       letterSpacing: '0.01em',

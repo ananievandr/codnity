@@ -15,9 +15,9 @@ function Services(): ReactElement {
       <Typography variant="body2" className={classes.paragraph}>
         Codnity Group consists of amazing Latvian engineering talent in order to digitalize any size businesses.
       </Typography>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} className={classes.gridContainer}>
         {serviceList.map((item, i) => (
-          <Grid key={i} item lg={3} md={4}>
+          <Grid key={i} item lg={3} md={4} sm={12}>
             <CardItem title={item.title} content={item.content} icon={item.icon} />
           </Grid>
         ))}

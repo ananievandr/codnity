@@ -9,13 +9,9 @@ function CodnityGoogleMap(): ReactElement {
     zoom: 13,
     greatPlaceCoords: { lat: 56.951597, lng: 24.122505 },
   };
-
+  const apiKey = process.env.REACT_APP_GOOGLE_MAP_API_KEY || '';
   return (
-    <GoogleMap
-      // apiKey={YOUR_GOOGLE_MAP_API_KEY} // set if you need stats etc ...
-      center={props.center}
-      zoom={props.zoom}
-    >
+    <GoogleMap apiKey={apiKey} center={props.center} zoom={props.zoom}>
       <Point lat={props.greatPlaceCoords.lat} lng={props.greatPlaceCoords.lng} />
     </GoogleMap>
   );

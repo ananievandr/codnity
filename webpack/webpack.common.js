@@ -2,6 +2,7 @@
 const path = require('path');
 const environment = require('./environment');
 
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -36,6 +37,9 @@ module.exports = {
       to: environment.paths.staticDistSrc,
       context: path.resolve(__dirname, '../public', 'static'),
     }]),
+    new webpack.DefinePlugin({
+      'process.env.REACT_APP_GOOGLE_MAP_API_KEY': JSON.stringify(''),
+    })
   ],
   module: {
     strictExportPresence: true,

@@ -1,6 +1,6 @@
-import { ImageListType } from './interfaces';
+import { FileListType } from './interfaces';
 
-export const openFileDialog = (inputRef): void => {
+export const openFileDialog = (inputRef: any): void => {
   if (inputRef.current) inputRef.current.click();
 };
 
@@ -24,13 +24,13 @@ export const getImage = (file: File): Promise<HTMLImageElement> => {
   });
 };
 
-export const getListFiles = (files: FileList, dataURLKey: string): Promise<ImageListType> => {
+export const getListFiles = (files: FileList, dataURLKey: string): Promise<FileListType> => {
   const promiseFiles: Array<Promise<string>> = [];
   for (let i = 0; i < files.length; i += 1) {
     promiseFiles.push(getBase64(files[i]));
   }
   return Promise.all(promiseFiles).then((fileListBase64: Array<string>) => {
-    const fileList: ImageListType = fileListBase64.map((base64, index) => ({
+    const fileList: FileListType = fileListBase64.map((base64, index) => ({
       [dataURLKey]: base64,
       file: files[index],
     }));

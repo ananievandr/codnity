@@ -35,7 +35,7 @@ export const useStyles = makeStyles(theme =>
       bottom: '20%',
       borderRadius: '50%',
       [theme.breakpoints.down('lg')]: {
-        left: '-4%',
+        left: 0,
       },
       [theme.breakpoints.down('md')]: {
         bottom: '15%',
@@ -58,7 +58,7 @@ export const useStyles = makeStyles(theme =>
       right: '-5%',
       bottom: '25%',
       [theme.breakpoints.down('lg')]: {
-        right: '-5%',
+        right: '-2%',
         bottom: '20%',
       },
       [theme.breakpoints.down('md')]: {
@@ -84,7 +84,7 @@ export const useStyles = makeStyles(theme =>
       left: '-5%',
       top: '15%',
       [theme.breakpoints.down('lg')]: {
-        left: '-5%',
+        left: '-3%',
       },
       [theme.breakpoints.down('md')]: {
         top: '15%',
@@ -108,7 +108,7 @@ export const useStyles = makeStyles(theme =>
       top: '7%',
       [theme.breakpoints.down('lg')]: {
         top: '5%',
-        right: '-4%',
+        right: '2%',
       },
       [theme.breakpoints.down('md')]: {
         top: '1%',

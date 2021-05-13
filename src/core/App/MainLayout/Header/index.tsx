@@ -49,9 +49,9 @@ function Header(props: Props): ReactElement {
   }, [expertiseOpen]);
 
   return (
-    <div className={classes.grow}>
-      <ElevationScroll {...props}>
-        <ClickAwayListener mouseEvent="onMouseDown" touchEvent="onTouchStart" onClickAway={onClickAway}>
+    <ClickAwayListener mouseEvent="onMouseDown" touchEvent="onTouchStart" onClickAway={onClickAway}>
+      <div className={classes.grow}>
+        <ElevationScroll {...props}>
           <AppBar className={clsx(classes.appBar, { [classes.openAppBar]: expertiseOpen })}>
             <Container maxWidth="lg">
               <Toolbar className={clsx(classes.toolbar, { [classes.openToolbar]: expertiseOpen })}>
@@ -104,11 +104,11 @@ function Header(props: Props): ReactElement {
               </Toolbar>
             </Container>
           </AppBar>
-        </ClickAwayListener>
-      </ElevationScroll>
-      <Toolbar className={classes.toolbar} />
-      <MobileView isMobileMenuOpen={isMobileMenuOpen} onClose={handleMobileMenuClose} onOpen={handleMobileMenuOpen} />
-    </div>
+        </ElevationScroll>
+        <Toolbar className={classes.toolbar} />
+        <MobileView isMobileMenuOpen={isMobileMenuOpen} onClose={handleMobileMenuClose} onOpen={handleMobileMenuOpen} />
+      </div>
+    </ClickAwayListener>
   );
 }
 

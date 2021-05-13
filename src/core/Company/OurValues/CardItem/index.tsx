@@ -18,7 +18,6 @@ function CardItem({ title, content, icon }: CardValueProps): ReactElement {
       justifyContent="flex-start"
       flexDirection="column"
       borderRadius="30px"
-      border="2px solid #7C61AF"
       height="100%"
       className={classes.root}
     >

@@ -13,6 +13,9 @@ export const useStyles = makeStyles(theme =>
       [theme.breakpoints.up('lg')]: {
         height: 'calc(100vh - 80px)',
       },
+      [theme.breakpoints.down('sm')]: {
+        marginTop: 40,
+      },
     },
     button: {
       backgroundColor: '#7C61AF',

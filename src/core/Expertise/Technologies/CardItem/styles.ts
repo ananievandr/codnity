@@ -12,8 +12,8 @@ export const useStyles = makeStyles(theme =>
       cursor: 'pointer',
       width: 240,
       height: 141,
-      [theme.breakpoints.down('md')]: {
-        width: 232,
+      [theme.breakpoints.down('lg')]: {
+        width: 230,
       },
       [theme.breakpoints.down('sm')]: {
         height: 121,

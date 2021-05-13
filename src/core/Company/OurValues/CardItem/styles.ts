@@ -4,6 +4,7 @@ export const useStyles = makeStyles(theme =>
   createStyles({
     root: {
       padding: 24,
+      border: '2px solid rgba(124, 97, 175, 0.2)',
       [theme.breakpoints.down('sm')]: {
         padding: 20,
       },

@@ -20,7 +20,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     focusVisible: {},
     buttonTitle: {
       position: 'relative',
-      color: '#000000',
+      color: ' #212121',
       padding: `0 0 2px`,
       fontWeight: 500,
     },

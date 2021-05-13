@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import { NavLink } from 'react-router-dom';
 import { Grid, Typography } from '@material-ui/core';
 
 import { SectionHeader } from 'uikit/SectionHeader';
@@ -18,7 +19,9 @@ function Services(): ReactElement {
       <Grid container spacing={2} className={classes.gridContainer}>
         {serviceList.map((item, i) => (
           <Grid key={i} item lg={3} md={4} sm={12}>
-            <CardItem title={item.title} content={item.content} icon={item.icon} />
+            <NavLink className={classes.link} to={`/services?anchor=${item.routePath}`}>
+              <CardItem title={item.title} content={item.content} icon={item.icon} />
+            </NavLink>
           </Grid>
         ))}
       </Grid>

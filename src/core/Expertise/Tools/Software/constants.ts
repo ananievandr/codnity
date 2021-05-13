@@ -57,7 +57,7 @@ export function getSoftwareList(): ISoftwareItem[] {
       className: classes.html5,
     },
     {
-      text: 'postgresql',
+      text: 'postgre',
       iconName: 'software:postgresql',
       className: classes.postgresql,
     },

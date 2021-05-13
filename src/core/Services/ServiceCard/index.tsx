@@ -7,10 +7,10 @@ import { Header } from './Header';
 import { CardItem } from './CardItem';
 import { ServiceCardProps } from './interfaces';
 
-function ServiceCard({ title, subTitle, column1 = [], column2 = [] }: ServiceCardProps): ReactElement {
+function ServiceCard({ title, subTitle, column1 = [], column2 = [], anchor }: ServiceCardProps): ReactElement {
   const classes = useStyles();
   return (
-    <Box component="div" className={classes.root}>
+    <Box component="div" className={classes.root} id={anchor}>
       <Header title={title} subTitle={subTitle} />
       <Grid container justify="space-between" className={classes.gridContainer}>
         <Grid item lg={6} md={6} sm={12} className={clsx(classes.fullWidth, classes.column1)}>

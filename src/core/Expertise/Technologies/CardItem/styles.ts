@@ -10,18 +10,21 @@ export const useStyles = makeStyles(theme =>
       flexDirection: 'column',
       justifyContent: 'space-between',
       cursor: 'pointer',
-      [theme.breakpoints.up('sm')]: {
-        height: 141,
+      width: 240,
+      height: 141,
+      [theme.breakpoints.down('md')]: {
+        width: 232,
       },
       [theme.breakpoints.down('sm')]: {
-        height: 115,
+        height: 121,
+        width: 166,
       },
       '&:hover': {
         backgroundColor: '#7C61AF',
         '& > $title': {
           color: '#ffffff',
         },
-        '& > div > svg > path': {
+        '& > div > svg path': {
           fill: '#ffffff',
         },
       },

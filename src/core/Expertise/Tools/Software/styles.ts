@@ -23,11 +23,14 @@ export const getStyles = makeStyles(theme =>
     hoverItem: {
       color: '#ffffff',
       fontWeight: 'bold',
-      fontSize: '16px',
+      fontSize: '14px',
       lineHeight: '21px',
       textTransform: 'uppercase',
       [theme.breakpoints.down('md')]: {
-        fontSize: '14px',
+        fontSize: '12px',
+      },
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '8px',
       },
     },
     gitlab: {

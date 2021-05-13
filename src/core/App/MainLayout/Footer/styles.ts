@@ -6,14 +6,6 @@ export const useStyles = makeStyles(theme =>
   createStyles({
     root: {
       flexGrow: 1,
-      [theme.breakpoints.down('sm')]: {
-        paddingTop: '36px',
-        paddingBottom: '15px',
-      },
-      [theme.breakpoints.up('sm')]: {
-        paddingTop: '46px',
-        paddingBottom: '30px',
-      },
     },
     footer: {
       width: '100%',
@@ -24,6 +16,15 @@ export const useStyles = makeStyles(theme =>
       flexDirection: 'column',
       color: '#ffffff',
       backgroundColor: '#7c61af',
+      paddingTop: '46px',
+      paddingBottom: '30px',
+      [theme.breakpoints.down('md')]: {
+        paddingTop: '36px',
+        paddingBottom: '15px',
+      },
+      [theme.breakpoints.down('sm')]: {
+        paddingBottom: '30px',
+      },
     },
     links: {
       [theme.breakpoints.down('md')]: {
@@ -35,15 +36,23 @@ export const useStyles = makeStyles(theme =>
       },
     },
     gridLinks: {
-      [theme.breakpoints.up('md')]: {
-        display: 'flex',
+      display: 'flex',
+      justifyContent: 'center',
+      [theme.breakpoints.down('md')]: {
         justifyContent: 'flex-end',
+      },
+      [theme.breakpoints.down('sm')]: {
+        justifyContent: 'flex-start',
       },
     },
     gridLinksMiddleColumn: {
-      [theme.breakpoints.up('md')]: {
-        display: 'flex',
-        justifyContent: 'space-around',
+      display: 'flex',
+      justifyContent: 'flex-start',
+      [theme.breakpoints.down('md')]: {
+        justifyContent: 'center',
+      },
+      [theme.breakpoints.down('sm')]: {
+        justifyContent: 'flex-start',
       },
     },
     copyrightSection: {
@@ -62,14 +71,23 @@ export const useStyles = makeStyles(theme =>
       },
     },
     networkItem: {
+      padding: 8,
+      borderRadius: '50%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      cursor: 'pointer',
       [theme.breakpoints.down('md')]: {
-        margin: '0 26px',
+        margin: '-8px 18px 0',
       },
       [theme.breakpoints.between('md', 'lg')]: {
-        margin: '0 16px',
+        margin: '-8px 8px 0',
       },
       [theme.breakpoints.up('lg')]: {
-        margin: '0 10px',
+        margin: '-8px 2px 0',
+      },
+      '&:hover': {
+        backgroundColor: 'rgba(91, 57, 155, 0.2)',
       },
     },
   }),

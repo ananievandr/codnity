@@ -28,5 +28,8 @@ export const useStyles = makeStyles(theme =>
       maxWidth: 580,
       textAlign: 'center',
     },
+    link: {
+      textDecoration: 'none',
+    },
   }),
 );

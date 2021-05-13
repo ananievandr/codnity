@@ -4,16 +4,16 @@ export const useStyles = makeStyles(theme =>
   createStyles({
     root: {
       marginBottom: 100,
-      '& $title': {
-        [theme.breakpoints.up('sm')]: {
-          marginBottom: 110,
-        },
-        [theme.breakpoints.between('md', 'sm')]: {
-          marginBottom: 80,
-        },
-        [theme.breakpoints.down('sm')]: {
-          marginBottom: 60,
-        },
+    },
+    paragraph: {
+      marginBottom: 60,
+      maxWidth: 800,
+      textAlign: 'center',
+      [theme.breakpoints.down('md')]: {
+        marginBottom: 48,
+      },
+      [theme.breakpoints.down('sm')]: {
+        marginBottom: 32,
       },
     },
     title: {

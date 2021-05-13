@@ -7,4 +7,5 @@ export interface ServiceCardProps {
   subTitle: string;
   column1?: IColumnItem[];
   column2?: IColumnItem[];
+  anchor: string;
 }

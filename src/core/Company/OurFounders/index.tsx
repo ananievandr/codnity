@@ -19,8 +19,8 @@ function OurFounders(): ReactElement {
         own interests and stories. Only afterwards you see our professionalism. How about you? Tell us, what you like
         and what’s your story.
       </Typography>
-      <Grid container justify="space-around" spacing={2}>
-        <Grid item lg={4} md={12} sm={12}>
+      <Grid container>
+        <Grid item lg={6} md={12} sm={12} className={classes.gridColumn1}>
           <CardItem
             title="company.founder1.title"
             content="company.founder1.content"
@@ -28,7 +28,7 @@ function OurFounders(): ReactElement {
             link=""
           />
         </Grid>
-        <Grid item lg={4} md={12} sm={12}>
+        <Grid item lg={6} md={12} sm={12} className={classes.gridColumn2}>
           <CardItem
             title="company.founder2.title"
             content="company.founder2.content"
@@ -37,6 +37,10 @@ function OurFounders(): ReactElement {
           />
         </Grid>
       </Grid>
+      <div className={classes.greenCircle} />
+      <div className={classes.yellowCircle} />
+      <div className={classes.redCircle} />
+      <div className={classes.violetCircle} />
     </Grid>
   );
 }

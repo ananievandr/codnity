@@ -8,16 +8,17 @@ import { useStyles } from './styles';
 
 function MainLayout(): ReactElement {
   const classes = useStyles();
-  const [height, setHeight] = useState('calc(100% - 80px)');
+  const [footerHeight, setFooterHeight] = useState(0);
 
-  const onFooterHeightChange = useCallback((footerHeight: number) => {
-    setHeight(`calc(100% - 80px - ${footerHeight}px)`);
+  const onFooterHeightChange = useCallback((value: number) => {
+    setFooterHeight(value);
   }, []);
 
+  const getContentHeight = (): string => `calc(100% - 80px - ${footerHeight}px)`;
   return (
     <>
       <Header />
-      <Container className={classes.container} style={{ minHeight: height }}>
+      <Container className={classes.container} style={{ minHeight: getContentHeight() }}>
         <LayoutRoutes />
       </Container>
       <Footer onHeightReady={onFooterHeightChange} />

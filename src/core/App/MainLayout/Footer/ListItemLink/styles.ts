@@ -1,6 +1,7 @@
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { withStyles } from '@material-ui/styles';
+import { NONAME } from 'dns';
 
 export const ListItemStyled = withStyles({
   root: {
@@ -19,5 +20,10 @@ export const ListItemTextStyled = withStyles({
     fontSize: '14px',
     lineHeight: '24px',
     letterSpacing: '0.01em',
+    borderBottom: '1px solid transparent',
+    '&:hover': {
+      borderBottom: '1px solid #FDFFFC',
+      flex: 'none',
+    },
   },
 })(ListItemText);

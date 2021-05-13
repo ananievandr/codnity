@@ -28,7 +28,10 @@ export const getStyles = makeStyles(theme =>
       lineHeight: '21px',
       textTransform: 'uppercase',
       [theme.breakpoints.down('md')]: {
-        fontSize: '14px',
+        fontSize: '12px',
+      },
+      [theme.breakpoints.down('md')]: {
+        fontSize: '9px',
       },
     },
     itemA: {
@@ -142,7 +145,7 @@ export const getStyles = makeStyles(theme =>
       [theme.breakpoints.down('md')]: {
         width: 71,
         height: 71,
-        padding: 8,
+        padding: 15,
       },
       [theme.breakpoints.down('sm')]: {
         width: 58,
@@ -160,6 +163,7 @@ export const getStyles = makeStyles(theme =>
       [theme.breakpoints.down('md')]: {
         width: 68,
         height: 68,
+        fontSize: 12,
       },
       [theme.breakpoints.down('sm')]: {
         width: 50,

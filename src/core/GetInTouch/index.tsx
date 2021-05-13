@@ -101,6 +101,10 @@ function GetInTouch(): ReactElement {
             send message
           </Button>
         </Box>
+        <div className={classes.greenCircle} />
+        <div className={classes.greenBigCircle} />
+        <div className={classes.yellowCircle} />
+        <div className={classes.redCircle} />
       </form>
       <Box component="div" height="600px" width="100%" margin="100px 0 60px">
         <CodnityGoogleMap />

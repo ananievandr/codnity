@@ -101,6 +101,10 @@ function Discuss(): ReactElement {
           </Button>
         </Box>
       </form>
+      <div className={classes.greenCircle} />
+      <div className={classes.greenBigCircle} />
+      <div className={classes.violetCircle} />
+      <div className={classes.redCircle} />
     </Grid>
   );
 }

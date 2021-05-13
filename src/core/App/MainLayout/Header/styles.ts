@@ -5,9 +5,29 @@ export const useStyles = makeStyles((theme: Theme) =>
     appBar: {
       backgroundColor: '#ffffff',
     },
+    openAppBar: {
+      boxShadow: '0px 8px 22px -6px rgb(24 39 75 / 12%), 0px 14px 64px -4px rgb(24 39 75 / 12%)',
+    },
     toolbar: {
-      height: '80px',
+      height: 80,
       padding: 0,
+    },
+    openToolbar: {
+      height: 310,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      alignItems: 'flex-start',
+      padding: '12px 0 36px',
+    },
+    expertiseMenu: {
+      color: '#212121',
+    },
+    hide: {
+      display: 'none',
+      '&$expertiseMenu': {
+        display: 'flex',
+      },
     },
     grow: {
       flexGrow: 1,

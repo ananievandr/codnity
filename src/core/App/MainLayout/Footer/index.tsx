@@ -69,9 +69,15 @@ function Footer({ onHeightReady }: FooterProps): ReactElement {
             </Grid>
             <Grid item md={6} sm={12}>
               <Grid container className={classes.socials}>
-                <IconCodnity name="ic-linkedin" className={classes.networkItem} />
-                <IconCodnity name="ic-facebook" className={classes.networkItem} />
-                <IconCodnity name="ic-instagram" className={classes.networkItem} />
+                <span className={classes.networkItem}>
+                  <IconCodnity name="ic-linkedin" size={16} />
+                </span>
+                <span className={classes.networkItem}>
+                  <IconCodnity name="ic-facebook" size={16} />
+                </span>
+                <span className={classes.networkItem}>
+                  <IconCodnity name="ic-instagram" size={16} />
+                </span>
               </Grid>
             </Grid>
           </Grid>

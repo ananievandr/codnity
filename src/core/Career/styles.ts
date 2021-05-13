@@ -15,6 +15,7 @@ export const useStyles = makeStyles(theme =>
       [theme.breakpoints.down('lg')]: {
         padding: '40px 0 100px',
       },
+      position: 'relative',
     },
     paragraph: {
       marginBottom: 20,
@@ -33,6 +34,73 @@ export const useStyles = makeStyles(theme =>
       textDecoration: 'none',
       '&:hover': {
         textDecoration: 'underline',
+      },
+    },
+    greenCircle: {
+      position: 'absolute',
+      left: '9%',
+      top: '12%',
+      width: 20,
+      height: 20,
+      backgroundColor: '#2CA58D',
+      borderRadius: '50%',
+      [theme.breakpoints.down('lg')]: {
+        left: '11%',
+      },
+      [theme.breakpoints.down('md')]: {
+        top: '6%',
+        left: '12%',
+      },
+      [theme.breakpoints.down('sm')]: {
+        left: '0',
+        top: '27%',
+        width: 14,
+        height: 14,
+      },
+    },
+    yellowCircle: {
+      position: 'absolute',
+      right: '-3%',
+      top: '13%',
+      width: 23,
+      height: 23,
+      backgroundColor: '#FFBD00',
+      borderRadius: '50%',
+      [theme.breakpoints.down('lg')]: {
+        right: '-2%',
+        top: '12%',
+        width: 19,
+        height: 19,
+      },
+      [theme.breakpoints.down('md')]: {
+        top: '4%',
+        right: '5%',
+      },
+      [theme.breakpoints.down('sm')]: {
+        right: 0,
+        top: 0,
+      },
+    },
+    redCircle: {
+      position: 'absolute',
+      left: '-5%',
+      bottom: '12%',
+      width: 25,
+      height: 25,
+      backgroundColor: '#ED6A5A',
+      borderRadius: '50%',
+      [theme.breakpoints.down('lg')]: {
+        left: '-2%',
+      },
+      [theme.breakpoints.down('md')]: {
+        bottom: '24%',
+        left: '4%',
+      },
+      [theme.breakpoints.down('sm')]: {
+        left: '5%',
+        bottom: '7%',
+        width: 15,
+        height: 15,
       },
     },
   }),

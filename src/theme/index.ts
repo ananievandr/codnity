@@ -6,8 +6,8 @@ const theme = createMuiTheme({
       xs: 0,
       sm: 375,
       md: 768,
-      lg: 1440,
-      xl: 1920,
+      lg: 1280,
+      xl: 1440,
     },
   },
   typography: {
@@ -30,13 +30,23 @@ const theme = createMuiTheme({
     },
     MuiContainer: {
       root: {
-        '@media screen and (device-width: 768px)': {
+        '@media (min-width: 375px)': {
+          paddingLeft: 16,
+          paddingRight: 16,
+        },
+        '@media (min-width: 768px)': {
           paddingLeft: 24,
           paddingRight: 24,
         },
-        '@media screen and (device-width: 1440px)': {
-          paddingLeft: 100,
-          paddingRight: 100,
+        '@media (min-width: 1280px)': {
+          paddingLeft: 48,
+          paddingRight: 48,
+        },
+        '@media (min-width: 1440px)': {
+          '&.MuiContainer-maxWidthLg': {
+            maxWidth: 1260,
+            padding: 0,
+          },
         },
       },
     },

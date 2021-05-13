@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { Box, Grid } from '@material-ui/core';
+import { Box, Grid, Typography } from '@material-ui/core';
 
 import { SectionHeader } from 'uikit/SectionHeader';
 
@@ -16,12 +16,17 @@ function Technologies(): ReactElement {
       justifyContent="center"
       display="flex"
       flexDirection="column"
+      alignItems="center"
       width="100%"
     >
       <SectionHeader className={classes.title} title="Diverse [technologies]" />
+      <Typography variant="body2" className={classes.paragraph}>
+        Armed with years of experience developing web and mobile solutions, we consult our clients on which technology
+        stack can positively impact their businesses.
+      </Typography>
       <Grid container spacing={1} className={classes.gridContainer}>
         {cardList.map((item, i) => (
-          <Grid item lg={3} md={4} sm={6} xs={6} key={i} className={classes.gridItem}>
+          <Grid item lg md={4} sm={6} key={i} className={classes.gridItem}>
             <CardItem title={item.title} icon={item.icon} />
           </Grid>
         ))}

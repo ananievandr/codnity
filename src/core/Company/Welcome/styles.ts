@@ -98,14 +98,14 @@ export const useStyles = makeStyles(theme =>
     greenBigCircle: {
       zIndex: -1,
       position: 'absolute',
-      right: '-7%',
+      right: '-4%',
       bottom: '30%',
       width: 19,
       height: 19,
       backgroundColor: '#2CA58D',
       borderRadius: '50%',
       [theme.breakpoints.down('lg')]: {
-        right: '-3%',
+        right: 0,
       },
       [theme.breakpoints.down('md')]: {
         display: 'none',

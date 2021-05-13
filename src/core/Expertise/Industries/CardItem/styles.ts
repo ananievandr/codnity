@@ -37,8 +37,12 @@ export const useStyles = makeStyles(theme =>
     },
     contentItem: {
       marginBottom: 10,
+      fontWeight: 500,
       [theme.breakpoints.down('md')]: {
         marginBottom: 8,
+      },
+      [theme.breakpoints.down('sm')]: {
+        fontWeight: 400,
       },
       '&:last-child': {
         marginBottom: 0,

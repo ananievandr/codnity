@@ -43,7 +43,7 @@ export const useStyles = makeStyles(theme =>
       },
       [theme.breakpoints.down('sm')]: {
         left: '2%',
-        top: '27%',
+        top: '20%',
         width: 12,
         height: 12,
       },

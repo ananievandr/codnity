@@ -9,7 +9,7 @@ export const useStyles = makeStyles(theme =>
       [theme.breakpoints.down('md')]: {
         justifyContent: 'center',
         textAlign: 'center',
-        marginBottom: 60,
+        marginBottom: 100,
         marginTop: 40,
       },
       [theme.breakpoints.up('md')]: {

@@ -9,12 +9,11 @@ export const useStyles = makeStyles(theme =>
       position: 'relative',
       [theme.breakpoints.down('md')]: {
         justifyContent: 'center',
+        marginBottom: 100,
+        marginTop: 40,
       },
       [theme.breakpoints.up('lg')]: {
         height: 'calc(100vh - 80px)',
-      },
-      [theme.breakpoints.down('sm')]: {
-        marginTop: 40,
       },
     },
     button: {

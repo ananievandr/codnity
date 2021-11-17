@@ -10,10 +10,7 @@ function PartnershipApproach(): ReactElement {
   const classes = useStyles();
   return (
     <Box component="div" display="flex" flexDirection="column" className={classes.root}>
-      <SectionHeader
-        className={classes.title}
-        title="We believe in our structural and friendly [partnership approach]"
-      />
+      <SectionHeader className={classes.title} title="ourApproach.partnership.header" />
       <Grid container justify="space-between">
         <Grid item lg={6} md={12}>
           <CardItem

@@ -4,7 +4,7 @@ import { Checkbox, CheckboxProps, withStyles } from '@material-ui/core';
 const CodnityCheckbox = withStyles({
   root: {
     color: 'rgba(91, 57, 155, 0.2)',
-    paddingLeft: 0,
+    padding: 8,
     '&$checked': {
       color: '#7c61af',
     },

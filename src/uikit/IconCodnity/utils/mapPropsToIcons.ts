@@ -1,5 +1,7 @@
 import icEmpty from '../icons/ic-empty.svg';
 import icMenu from '../icons/ic-menu.svg';
+import icArrowUp from '../icons/ic-arrow-up.svg';
+import icSuccess from '../icons/ic-success.svg';
 
 import icCodnityLogo from '../icons/codnity-logo.svg';
 import icCodnityLogoWhite from '../icons/white/codnity-logo.svg';
@@ -61,6 +63,7 @@ import icDevOfficeBuilding from '../icons/development/ic-office-building.svg';
 import icDevStartup from '../icons/development/ic-startup.svg';
 
 import { softwareMapPropsToIcons } from './mapper/software';
+import { projectPathIconProps } from './projectPath';
 
 export const mapPropsToIcons = {
   'codnity-logo': icCodnityLogo,
@@ -114,5 +117,8 @@ export const mapPropsToIcons = {
   'ic-facebook': icFacebook,
   'ic-empty': icEmpty,
   'ic-menu': icMenu,
+  'ic-arrow-up': icArrowUp,
+  'ic-success': icSuccess,
   ...softwareMapPropsToIcons,
+  ...projectPathIconProps,
 };

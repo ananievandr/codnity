@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Box, Typography } from '@material-ui/core';
+import { FormattedMessage } from 'react-intl';
 
 import { SectionHeader } from 'uikit/SectionHeader';
 
@@ -18,10 +19,9 @@ function Tools(): ReactElement {
       width="100%"
       marginBottom="60px"
     >
-      <SectionHeader title="Practices and [tools]" />
+      <SectionHeader title="expertise.tools.header" />
       <Typography variant="body2" className={classes.paragraph}>
-        In our development processes, we use tools and practices that contribute to the success of our projects and
-        facilitate communication with our clients.
+        <FormattedMessage id="expertise.tools.subHeader" />
       </Typography>
       <Software />
     </Box>

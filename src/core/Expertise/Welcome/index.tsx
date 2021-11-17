@@ -11,7 +11,7 @@ function Welcome(): ReactElement {
   return (
     <Grid container className={classes.root} alignItems="center">
       <Grid item lg={6} md={12} sm={12} className={classes.title}>
-        <SectionHeader title="Our [competencies] generate positive business outcomes" />
+        <SectionHeader title="expertise.welcome.header" />
       </Grid>
       <Grid item lg={6} md={12} sm={12}>
         <IconCodnity name="asset:brainstorming" width="100%" height="100%" />

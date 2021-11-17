@@ -6,7 +6,7 @@ import ExpandMore from '@material-ui/icons/ExpandMore';
 
 import { MenuCodnity } from 'uikit/MenuCodnity';
 import { MenuItemCodnity } from 'uikit/MenuItemCodnity';
-import { LocaleContext } from 'core/App/LocaleProvider/localeContext';
+import { LocaleContext, LocaleTypes } from 'core/App/LocaleProvider/localeContext';
 
 import { useStyles } from './styles';
 import { languageList } from './constants';
@@ -15,13 +15,13 @@ import { LanguageItem } from './interfaces';
 function LanguageMenu(): ReactElement {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [language, setLanguage] = useState(languageList[0]);
+  const [curLocale, setCurLocale] = useState(LocaleTypes.EN);
   const open = Boolean(anchorEl);
-  const { localeIndex, onChangeLocale } = useContext(LocaleContext);
+  const { locale, onChangeLocale } = useContext(LocaleContext);
 
   useEffect(() => {
-    if (localeIndex >= 0) setLanguage(languageList[localeIndex]);
-  }, [localeIndex]);
+    if (locale) setCurLocale(locale);
+  }, [locale]);
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -48,7 +48,7 @@ function LanguageMenu(): ReactElement {
         onClick={handleMenu}
       >
         <Typography component="span" variant="subtitle1" color="inherit" className={classes.buttonTitle}>
-          {language.title}
+          {curLocale}
           <span className={classes.buttonMarked} />
         </Typography>
         {open ? <ExpandLess className={classes.icon} /> : <ExpandMore className={classes.icon} />}

@@ -11,7 +11,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       padding: 0,
       color: '#000000',
       position: 'relative',
-      '&:hover, &$focusVisible': {
+      '&:hover, &$focusVisible, &$active': {
         zIndex: 1,
         '& $buttonMarked': {
           opacity: 1,
@@ -19,6 +19,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       },
     },
     focusVisible: {},
+    active: {},
     link: {
       textDecoration: 'none',
       color: '#212121',

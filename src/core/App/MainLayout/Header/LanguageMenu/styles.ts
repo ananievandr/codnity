@@ -24,6 +24,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       color: '#000000',
       padding: `0 0 2px`,
       fontWeight: 700,
+      textTransform: 'uppercase',
     },
     buttonMarked: {
       opacity: 0,

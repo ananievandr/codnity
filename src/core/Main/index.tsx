@@ -9,6 +9,7 @@ import { Services } from './Services';
 import { Development } from './Development';
 import { Stats } from './Stats';
 import { Discuss } from './Discuss';
+import { ScrollTop } from './ScrollToTop';
 
 function Main(): ReactElement {
   return (
@@ -19,6 +20,7 @@ function Main(): ReactElement {
       <Development />
       <Stats />
       <Discuss />
+      <ScrollTop />
     </Grid>
   );
 }

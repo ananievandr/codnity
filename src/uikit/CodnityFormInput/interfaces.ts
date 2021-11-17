@@ -6,5 +6,8 @@ export interface CodinityFormInputProps {
   rows?: number;
   onClick?: () => void;
   onChange?: (value: string) => void;
+  onBlur?: (value: string) => void;
+  value?: string;
   upload?: boolean;
+  errorMessage?: string;
 }

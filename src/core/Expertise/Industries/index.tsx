@@ -18,7 +18,7 @@ function Industries(): ReactElement {
       flexDirection="column"
       width="100%"
     >
-      <SectionHeader title="Industries of proven [expertise]" className={classes.title} />
+      <SectionHeader title="expertise.industries.header" className={classes.title} />
       <Grid container className={classes.grid}>
         {industriesList.map((item, i) => (
           <Grid key={i} item lg={4} md={6} sm={6} xs={6} className={classes.gridItem}>

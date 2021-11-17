@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import clsx from 'clsx';
 import { Box, Grid, Typography } from '@material-ui/core';
+import { FormattedMessage } from 'react-intl';
 
 import { IconCodnity } from 'uikit/IconCodnity';
 import { IconSizes } from 'uikit/IconCodnity/constants';
@@ -13,7 +14,7 @@ function Stats(): ReactElement {
   const classes = useStyles();
   return (
     <Grid container className={classes.root} direction="column">
-      <SectionHeader title="We’re excited about [building the future]" />
+      <SectionHeader title="main.stats.header" />
       <Box component="div" width="100%" className={classes.border}>
         <Grid container justify="center">
           {statList.map((item, i) => (
@@ -32,7 +33,9 @@ function Stats(): ReactElement {
                     <div className={classes.projectCount}>{`${item.value}.`}</div>
                   </Box>
                   <Box component="div" display="flex" flexDirection="column" marginLeft="60px" maxWidth="165px">
-                    <Typography variant="body2">{item.content}</Typography>
+                    <Typography variant="body2">
+                      <FormattedMessage id={item.content} />
+                    </Typography>
                   </Box>
                 </Box>
               </Box>

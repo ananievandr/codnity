@@ -35,7 +35,7 @@ function CardItem({ title, content, icon }: CardValueProps): ReactElement {
       </Box>
       <Box component="div" display="flex" justifyContent="flex-start" className={classes.link}>
         <Typography variant="body2" className={clsx(classes.content, classes.linkContent)}>
-          Find out more
+          <FormattedMessage id="main.services.card.link" />
         </Typography>
         <IconCodnity name="violet:nav-arrow" className={classes.linkIcon} />
       </Box>

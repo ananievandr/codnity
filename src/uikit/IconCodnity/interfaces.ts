@@ -6,4 +6,5 @@ export interface IconProps {
   height?: string;
   width?: string;
   className?: string;
+  useOwnSize?: boolean;
 }

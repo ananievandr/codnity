@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Grid, Typography } from '@material-ui/core';
+import { FormattedMessage } from 'react-intl';
 
 import { SectionHeader } from 'uikit/SectionHeader';
 
@@ -10,10 +11,9 @@ function OurValues(): ReactElement {
   const classes = useStyles();
   return (
     <Grid container className={classes.root} direction="column">
-      <SectionHeader title="Our [values]" />
+      <SectionHeader title="company.ourValues.header" />
       <Typography variant="body2" className={classes.paragraph}>
-        Each our team member is different, but we all go along with these values and always are looking for them in our
-        next chap in Codnity:
+        <FormattedMessage id="company.ourValues.subHeader" />
       </Typography>
       <Grid container spacing={2}>
         <Grid item md={4} sm={12}>

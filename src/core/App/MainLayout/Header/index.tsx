@@ -1,6 +1,6 @@
-import React, { ReactElement, useCallback, useState } from 'react';
+import React, { ReactElement, useCallback, useEffect, useState } from 'react';
 import clsx from 'clsx';
-import { NavLink } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -29,6 +29,11 @@ function Header(props: Props): ReactElement {
   const [expertiseOpen, setExpertiseOpen] = useState(false);
 
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  const location = useLocation();
+
+  useEffect(() => {
+    setExpertiseOpen(false);
+  }, [location]);
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
@@ -56,17 +61,18 @@ function Header(props: Props): ReactElement {
             <Container maxWidth="lg">
               <Toolbar className={clsx(classes.toolbar, { [classes.openToolbar]: expertiseOpen })}>
                 <Box component="div" display="flex" alignItems="center" width="100%">
-                  <NavLink to={Routes.main}>
+                  <Link to={Routes.main}>
                     <IconCodnity className={classes.codnityLogo} name="codnity-logo" width="122px" height="36px" />
-                  </NavLink>
+                  </Link>
                   <div className={classes.sectionDesktop}>
                     <ButtonRouterLink to={Routes.career} title="navigation.career" noWeight />
-                    <ButtonRouterLink to={Routes.insights} title="navigation.insights" noWeight />
+                    {/*<ButtonRouterLink to={Routes.insights} title="navigation.insights" noWeight />*/}
                   </div>
                   <div className={classes.grow} />
                   <div className={classes.sectionDesktop}>
                     <ButtonRouterLink to={Routes.services} title="navigation.services" />
-                    <ExpertiseMenu open={expertiseOpen} onClick={handleExpertiseClick} />
+                    <ButtonRouterLink to={Routes.expertise} title="navigation.expertise" />
+                    {/*<ExpertiseMenu open={expertiseOpen} onClick={handleExpertiseClick} />*/}
                     <ButtonRouterLink to={Routes.ourAproach} title="navigation.ourApproach" />
                     <ButtonRouterLink to={Routes.company} title="navigation.company" />
                     <LanguageMenu />
@@ -94,18 +100,20 @@ function Header(props: Props): ReactElement {
                     title="Competence"
                     subTitle="Quis nec nulla praesent convallis. Tellus amet, cursus mauris vulputate mus scelerisque. Montes, et quam tortor placerat nibh quisque."
                   />
+                  {/*
                   <MenuItem
                     onClick={handleExpertiseClick}
                     routePath={Routes.expertise}
                     title="Case studies"
                     subTitle="Quis nec nulla praesent convallis. Tellus amet, cursus mauris vulputate mus scelerisque. Montes, et quam tortor placerat nibh quisque."
                   />
+                   */}
                 </div>
               </Toolbar>
             </Container>
           </AppBar>
         </ElevationScroll>
-        <Toolbar className={classes.toolbar} />
+        <Toolbar className={classes.toolbar} id="back-to-top-anchor" />
         <MobileView isMobileMenuOpen={isMobileMenuOpen} onClose={handleMobileMenuClose} onOpen={handleMobileMenuOpen} />
       </div>
     </ClickAwayListener>

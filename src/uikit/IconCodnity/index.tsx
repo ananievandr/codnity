@@ -7,13 +7,13 @@ import { IconProps } from './interfaces';
 /** по умолчанию иконка приложения сбера */
 const defaultName = 'ic-empty';
 
-function IconCodnity({ name, size = IconSizes.sm24, height, width, className }: IconProps): ReactElement {
+function IconCodnity({ name, size = IconSizes.sm24, height, width, className, useOwnSize }: IconProps): ReactElement {
   const IconComponent = mapPropsToIcons[name || defaultName];
   const componentStyles = {
     width: width || `${size}px`,
     height: height || `${size}px`,
   };
-  return <IconComponent style={componentStyles} className={className} />;
+  return <IconComponent style={useOwnSize ? {} : componentStyles} className={className} />;
 }
 
 export { IconCodnity };

@@ -31,6 +31,9 @@ module.exports = {
       silent: false,
       formatter: typescriptFormatter,
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.REACT_APP_API': JSON.stringify(environment.context.dev),
+    })
   ]
 };

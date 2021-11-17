@@ -1,10 +1,10 @@
 import React, { ReactElement } from 'react';
 import { Box } from '@material-ui/core';
 
-import { IconCodnity } from 'uikit/IconCodnity';
 import { SectionHeader } from 'uikit/SectionHeader';
 
 import { useStyles } from './styles';
+import { RoadMap } from './RoadMap';
 
 function ProjectPath(): ReactElement {
   const classes = useStyles();
@@ -18,11 +18,17 @@ function ProjectPath(): ReactElement {
       className={classes.root}
       width="100%"
     >
-      <SectionHeader className={classes.title} title="Project [path]" />
-      <Box component="div" width="100%" height="100%">
-        <IconCodnity name="asset:project-path" className={classes.iconDesktop} width="100%" height="100%" />
-        <IconCodnity name="asset:project-path-tablet" className={classes.iconTablet} width="100%" height="100%" />
-        <IconCodnity name="asset:project-path-mobile" className={classes.iconMobile} width="100%" height="100%" />
+      <SectionHeader className={classes.title} title="ourApproach.projectPath.header" />
+      <Box
+        component="div"
+        width="100%"
+        height="100%"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        flexDirection="column"
+      >
+        <RoadMap />
       </Box>
     </Box>
   );

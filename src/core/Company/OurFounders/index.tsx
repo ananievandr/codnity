@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Grid, Typography } from '@material-ui/core';
+import { FormattedMessage } from 'react-intl';
 
 import { SectionHeader } from 'uikit/SectionHeader';
 
@@ -12,12 +13,9 @@ function OurFounders(): ReactElement {
   const classes = useStyles();
   return (
     <Grid container className={classes.root} direction="column">
-      <SectionHeader title="Our [founders]" />
+      <SectionHeader title="company.ourFounders.header" />
       <Typography variant="body2" className={classes.paragraph}>
-        If you want to see our professional background, check Founders Experience. We believe that one of the main
-        ingredients in successful partnerships is to get to know us as people. You get to know us as persons with our
-        own interests and stories. Only afterwards you see our professionalism. How about you? Tell us, what you like
-        and what’s your story.
+        <FormattedMessage id="company.ourFounders.subHeader" />
       </Typography>
       <Grid container>
         <Grid item lg={6} md={12} sm={12} className={classes.gridColumn1}>
@@ -25,7 +23,7 @@ function OurFounders(): ReactElement {
             title="company.founder1.title"
             content="company.founder1.content"
             imageSrc={FounderJanisImg}
-            link=""
+            link="https://lv.linkedin.com/in/j%C4%81nis-anspaks-87207733"
           />
         </Grid>
         <Grid item lg={6} md={12} sm={12} className={classes.gridColumn2}>
@@ -33,7 +31,7 @@ function OurFounders(): ReactElement {
             title="company.founder2.title"
             content="company.founder2.content"
             imageSrc={FounderGirtsImg}
-            link=""
+            link="https://lv.linkedin.com/in/girts-ledins-b7553139"
           />
         </Grid>
       </Grid>

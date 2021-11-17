@@ -10,7 +10,7 @@ import Box from '@material-ui/core/Box';
 
 import { Routes } from 'utils/constants/Routes';
 import { CodnitySwitch } from 'uikit/CodnitySwitch';
-import { LocaleContext } from 'core/App/LocaleProvider/localeContext';
+import { LocaleContext, LocaleTypes } from 'core/App/LocaleProvider/localeContext';
 
 import { MobileViewProps } from './interfaces';
 import { useStyles, ListItemStyled, ListItemTextStyled, ListStyled, DividerStyled } from './styles';
@@ -19,7 +19,7 @@ import { ListItemLink } from './ListItemLink';
 function MobileView(props: MobileViewProps): ReactElement {
   const { isMobileMenuOpen, onClose, onOpen } = props;
   const classes = useStyles();
-  const { localeIndex, onChangeLocale } = useContext(LocaleContext);
+  const { locale, onChangeLocale } = useContext(LocaleContext);
   const [open, setOpen] = React.useState(false);
 
   const onExpand = useCallback(() => {
@@ -28,8 +28,8 @@ function MobileView(props: MobileViewProps): ReactElement {
 
   const handleChangeLanguage = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
-      const index = event.target.checked ? 1 : 0;
-      onChangeLocale(index);
+      const curLocale = event.target.checked ? LocaleTypes.LV : LocaleTypes.EN;
+      onChangeLocale(curLocale);
     },
     [onChangeLocale],
   );
@@ -51,16 +51,18 @@ function MobileView(props: MobileViewProps): ReactElement {
           <ListStyled>
             <ListItemLink
               to={Routes.expertise}
-              title="expertise.competence"
+              title="menu.expertise.competence"
               className={classes.nested}
               onClick={onClose}
             />
+            {/*
             <ListItemLink
               to={Routes.expertise}
               title="expertise.caseStudies"
               className={classes.nested}
               onClick={onClose}
             />
+             */}
           </ListStyled>
         </Collapse>
         <ListItemLink to={Routes.ourAproach} title="navigation.ourApproach" onClick={onClose} />
@@ -69,14 +71,14 @@ function MobileView(props: MobileViewProps): ReactElement {
       <DividerStyled />
       <ListStyled>
         <ListItemLink to={Routes.career} title="navigation.career" onClick={onClose} />
-        <ListItemLink to={Routes.insights} title="navigation.insights" onClick={onClose} />
+        {/*<ListItemLink to={Routes.insights} title="navigation.insights" onClick={onClose} />*/}
       </ListStyled>
       <DividerStyled />
       <Box component="div" className={classes.languageSwitch}>
-        <CodnitySwitch onChange={handleChangeLanguage} checked={localeIndex === 1} />
+        <CodnitySwitch onChange={handleChangeLanguage} checked={locale === LocaleTypes.LV} />
         <Box component="div" className={classes.switchLabel}>
           <Box component="div">EN</Box>
-          <Box component="div">LT</Box>
+          <Box component="div">LV</Box>
         </Box>
       </Box>
     </div>

@@ -23,4 +23,8 @@ module.exports = {
     images: `static/assets/images`,
     js: 'static/js',
   },
+  context: {
+    dev: 'https://stage.codnity.com/api',
+    prod: '/api'
+  }
 };

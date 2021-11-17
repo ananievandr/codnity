@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { FormattedMessage } from 'react-intl';
 import clsx from 'clsx';
-import { Link as RouterLink } from 'react-router-dom';
+import { NavLink as RouterLink } from 'react-router-dom';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
 

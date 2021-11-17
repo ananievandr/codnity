@@ -5,7 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 import { theme } from 'theme';
 
-import { LocaleProvider } from './LocaleProvider';
+import LocaleProvider from './LocaleProvider';
 import { MainLayout } from './MainLayout';
 
 function RootApp(): ReactElement {

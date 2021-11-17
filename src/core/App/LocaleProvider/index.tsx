@@ -1,37 +1,30 @@
-import React, { Component } from 'react';
+import React, { ReactElement } from 'react';
 import { IntlProvider } from 'react-intl';
+import { BrowserRouter } from 'react-router-dom';
 
 import { StorageKeys } from 'utils/constants/StorageKeys';
 import { storage } from 'utils/storage';
 
-import { LocaleProviderState, LocaleProviderProps } from './interfaces';
-import { listLocales, LocaleContext } from './localeContext';
+import { LocaleProviderProps } from './interfaces';
+import { messages, LocaleContext, LocaleTypes } from './localeContext';
 
-export class LocaleProvider extends Component<LocaleProviderProps, LocaleProviderState> {
-  constructor(props: LocaleProviderProps) {
-    super(props);
+function LocaleProvider({ children }: LocaleProviderProps): ReactElement {
+  const curLocale = storage.getItem(StorageKeys.codnityLocale);
+  const locale = curLocale || LocaleTypes.EN;
 
-    const localeIndex = Number(storage.getItem(StorageKeys.eduLocaleIndex));
-
-    this.state = {
-      localeIndex: listLocales[localeIndex] ? localeIndex : 0,
-    };
-  }
-
-  public handleChangeLocale = (id: number): void => {
-    storage.setItem(StorageKeys.eduLocaleIndex, `${id}`);
-    this.setState({ localeIndex: id });
+  const handleChangeLocale = (value: LocaleTypes): void => {
+    storage.setItem(StorageKeys.codnityLocale, value);
+    const pathname = document.location.pathname;
+    document.location.replace(pathname.replace(locale, `${value}`));
   };
 
-  render() {
-    const { children } = this.props;
-    const { localeIndex } = this.state;
-    return (
-      <IntlProvider locale="en" messages={listLocales[localeIndex]}>
-        <LocaleContext.Provider value={{ localeIndex, onChangeLocale: this.handleChangeLocale }}>
-          {children}
-        </LocaleContext.Provider>
-      </IntlProvider>
-    );
-  }
+  return (
+    <IntlProvider locale={locale} messages={messages[locale]} defaultLocale={LocaleTypes.EN}>
+      <LocaleContext.Provider value={{ locale, onChangeLocale: handleChangeLocale }}>
+        <BrowserRouter basename={`/${locale}`}>{children}</BrowserRouter>
+      </LocaleContext.Provider>
+    </IntlProvider>
+  );
 }
+
+export default LocaleProvider;

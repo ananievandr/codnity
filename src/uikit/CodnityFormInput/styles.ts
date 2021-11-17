@@ -21,6 +21,14 @@ export const useStyles = makeStyles(theme =>
         cursor: 'pointer',
       },
     },
+    error: {
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      transform: 'translate(0, 14px)',
+      fontSize: '0.6rem',
+      color: '#f44336',
+    },
   }),
 );
 

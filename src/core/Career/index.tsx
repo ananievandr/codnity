@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import clsx from 'clsx';
+import { FormattedMessage } from 'react-intl';
 
 import { IconCodnity } from 'uikit/IconCodnity';
 import { SectionHeader } from 'uikit/SectionHeader';
@@ -13,25 +14,23 @@ function Career(): ReactElement {
   return (
     <Grid container className={classes.root}>
       <Grid item lg={6} md={12}>
-        <SectionHeader title="[Start career] at Codnity" />
+        <SectionHeader title="career.header" />
         <div className={classes.textBlock}>
           <Typography variant="body2" className={classes.paragraph}>
-            If you want to have a kick ass career, understand business, and around what the world is spinning, also you
-            have the guts, the ambition, and you like to have fun, we are always looking for great people and ready to
-            hire.
+            <FormattedMessage id="career.description1" />
           </Typography>
           <Typography variant="body2" className={classes.paragraph}>
-            We guarantee that your personality and career will blow up, if you are ready to work and learn.*
+            <FormattedMessage id="career.description2" />
           </Typography>
           <Typography variant="body2" className={classes.paragraph}>
-            Send your CV to{' '}
+            <FormattedMessage id="career.cvPart1" />{' '}
             <a className={clsx(classes.mail, classes.bold)} href="mailto:kickass@codnity.com">
               kickass@codnity.com
             </a>{' '}
-            with note “I would like to kick-ass”
+            <FormattedMessage id="career.cvPart2" />
           </Typography>
           <Typography variant="body2" className={clsx(classes.paragraph, classes.bold)}>
-            *Take into account that blowing up could have different meanings. Just joking :)
+            <FormattedMessage id="career.description3" />
           </Typography>
         </div>
       </Grid>

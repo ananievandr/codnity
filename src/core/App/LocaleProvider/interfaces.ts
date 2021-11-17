@@ -1,14 +1,12 @@
 import { ReactNode, ReactNodeArray } from 'react';
 
-export interface LocaleProviderState {
-  localeIndex: number;
-}
+import { LocaleTypes } from './localeContext';
 
 export interface LocaleProviderProps {
   children: ReactNodeArray | ReactNode;
 }
 
 export interface LocaleContextProps {
-  localeIndex: number;
-  onChangeLocale: (id: number) => void;
+  locale: LocaleTypes;
+  onChangeLocale: (LocaleTypes: LocaleTypes) => void;
 }

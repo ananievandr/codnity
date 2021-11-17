@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Grid, Typography } from '@material-ui/core';
+import { FormattedMessage } from 'react-intl';
 
 import { SectionHeader } from 'uikit/SectionHeader';
 
@@ -12,9 +13,9 @@ function Services(): ReactElement {
   const classes = useStyles();
   return (
     <Grid container className={classes.root} direction="column">
-      <SectionHeader title="Our [services]" />
+      <SectionHeader title="main.services.header" />
       <Typography variant="body2" className={classes.paragraph}>
-        Codnity Group consists of amazing Latvian engineering talent in order to digitalize any size businesses.
+        <FormattedMessage id="main.services.subHeader" />
       </Typography>
       <Grid container spacing={2} className={classes.gridContainer}>
         {serviceList.map((item, i) => (

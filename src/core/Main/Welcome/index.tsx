@@ -14,8 +14,8 @@ function Welcome(): ReactElement {
     <Grid container className={classes.root}>
       <Grid item lg={6} md={12} className={classes.gridTitle}>
         <Box component="div" className={classes.titleBox}>
-          <SectionHeader title="We develop state of art [software] and [digital products] for ambitions companies" />
-          <ButtonRouter className={classes.button} title="get free consultation" to={Routes.getInTouch} />
+          <SectionHeader title="main.welcome.header" />
+          <ButtonRouter className={classes.button} title="main.welcome.button" to={Routes.getInTouch} />
         </Box>
       </Grid>
       <Grid item lg={6} md={12}>

@@ -8,18 +8,18 @@ interface StatItem {
 
 export const statList: StatItem[] = [
   {
-    content: 'Projects for startups',
-    value: '95',
+    content: 'main.stats.list.0.content',
+    value: '3',
     icon: 'dev:startup',
   },
   {
-    content: 'Projects for small businesses',
-    value: '18',
+    content: 'main.stats.list.1.content',
+    value: '5',
     icon: 'dev:briefcase',
   },
   {
-    content: 'Projects for medium-sized enterprises',
-    value: '9',
+    content: 'main.stats.list.2.content',
+    value: '2',
     icon: 'dev:office-building',
   },
 ];

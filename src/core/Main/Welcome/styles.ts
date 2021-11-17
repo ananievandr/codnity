@@ -35,7 +35,7 @@ export const useStyles = makeStyles(theme =>
       },
     },
     gridTitle: {
-      [theme.breakpoints.down('lg')]: {
+      [theme.breakpoints.down('md')]: {
         display: 'flex',
         justifyContent: 'center',
       },

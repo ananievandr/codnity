@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { Route, Switch } from 'react-router';
+import { Redirect, Route, Switch } from 'react-router';
 
 import Main from 'core/Main';
 import Career from 'core/Career';
@@ -22,6 +22,8 @@ function LayoutRoutes(): ReactElement {
       <Route exact path={Routes.ourAproach} component={OurApproach} />
       <Route exact path={Routes.company} component={Company} />
       <Route exact path={Routes.getInTouch} component={GetInTouch} />
+      <Redirect from={Routes.base} to={Routes.main} />
+      <Route component={Main} />
     </Switch>
   );
 }

@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-
+import { FormattedMessage } from 'react-intl';
 import { Box, Typography } from '@material-ui/core';
 
 import { IconCodnity } from 'uikit/IconCodnity';
@@ -17,13 +17,13 @@ function CardItem({ title, contentItems, icon }: CardItemProps): ReactElement {
       <Box component="div">
         <Box component="div" className={classes.header}>
           <Typography variant="h6" className={classes.title}>
-            {title}
+            <FormattedMessage id={title} />
           </Typography>
         </Box>
         <Box component="div" marginLeft="15px">
           {contentItems.map((item, i) => (
             <Typography key={i} variant="body2" className={classes.contentItem}>
-              {item}
+              <FormattedMessage id={item} />
             </Typography>
           ))}
         </Box>

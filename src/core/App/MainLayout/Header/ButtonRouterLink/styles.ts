@@ -10,7 +10,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       margin: '0 15px',
       padding: 0,
       position: 'relative',
-      '&:hover, &$focusVisible': {
+      '&:hover, &$focusVisible, &.active': {
         zIndex: 1,
         '& $buttonMarked': {
           opacity: 1,

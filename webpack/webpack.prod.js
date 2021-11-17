@@ -2,6 +2,7 @@
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const webpack = require('webpack');
 
 const safePostCssParser = require('postcss-safe-parser');
 
@@ -68,6 +69,9 @@ module.exports =  {
       filename: 'css/[name].css',
       chunkFilename: 'css/[name].css',
     }),
+    new webpack.DefinePlugin({
+      'process.env.REACT_APP_API': JSON.stringify(environment.context.prod),
+    })
   ]
 };
 

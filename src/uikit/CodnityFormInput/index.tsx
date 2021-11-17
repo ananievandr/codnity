@@ -1,5 +1,6 @@
 import React, { ReactElement, useCallback } from 'react';
 import { FormControl } from '@material-ui/core';
+import FormHelperText from '@material-ui/core/FormHelperText';
 import clsx from 'clsx';
 
 import { IconCodnity } from 'uikit/IconCodnity';
@@ -15,8 +16,11 @@ function CodinityFormInput({
   multiline,
   rows,
   onClick,
+  onBlur,
   onChange,
   upload,
+  value,
+  errorMessage,
 }: CodinityFormInputProps): ReactElement {
   const classes = useStyles();
 
@@ -40,6 +44,15 @@ function CodinityFormInput({
     [onChange],
   );
 
+  const handleBlur = useCallback(
+    (event: any) => {
+      if (onBlur) {
+        onBlur(event.target.value);
+      }
+    },
+    [onBlur],
+  );
+
   return (
     <FormControl className={classes.input}>
       <CodnityLabel shrink htmlFor={name} focused={false}>
@@ -56,7 +69,13 @@ function CodinityFormInput({
         className={clsx({ [classes.upload]: upload }, { [classes.focused]: !upload })}
         endAdornment={renderIconUpload()}
         onChange={handleChange}
+        value={value}
+        onBlur={handleBlur}
+        aria-describedby="component-error-text"
       />
+      <FormHelperText className={classes.error} id="component-error-text">
+        {errorMessage}
+      </FormHelperText>
     </FormControl>
   );
 }

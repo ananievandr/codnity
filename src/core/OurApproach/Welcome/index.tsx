@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Grid, Typography } from '@material-ui/core';
+import { FormattedMessage } from 'react-intl';
 
 import { IconCodnity } from 'uikit/IconCodnity';
 import { SectionHeader } from 'uikit/SectionHeader';
@@ -11,11 +12,10 @@ function Welcome(): ReactElement {
   return (
     <Grid container className={classes.root}>
       <Grid item lg={6} md={12}>
-        <SectionHeader title="We’ve developed [a better approach] to custom software development" />
+        <SectionHeader title="ourApproach.welcome.header" />
         <div className={classes.textBlock}>
           <Typography variant="body2" className={classes.paragraph}>
-            By leveraging Agile development methodologies, human-centered design tools, and best practices around
-            security and risk management, we help organizations meet their needs reliably and efficiently.
+            <FormattedMessage id="ourApproach.welcome.subHeader" />
           </Typography>
         </div>
       </Grid>

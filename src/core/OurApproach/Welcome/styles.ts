@@ -105,8 +105,8 @@ export const useStyles = makeStyles(theme =>
       backgroundColor: '#2CA58D',
       borderRadius: '50%',
       [theme.breakpoints.down('lg')]: {
-        right: '-5%',
-        bottom: '20%',
+        right: '1%',
+        bottom: '16%',
       },
       [theme.breakpoints.down('md')]: {
         display: 'none',

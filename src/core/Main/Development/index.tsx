@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Grid, Typography } from '@material-ui/core';
+import { FormattedMessage } from 'react-intl';
 
 import { useStyles } from './styles';
 import { Software } from './Software';
@@ -10,11 +11,10 @@ function Development(): ReactElement {
   return (
     <Grid container className={classes.root}>
       <Grid item lg={6} md={12} className={classes.gridTitle}>
-        <SectionHeader title="We excel at quality [software development]" />
+        <SectionHeader title="main.development.header" />
         <div className={classes.textBlock}>
           <Typography variant="body2" className={classes.paragraph}>
-            Our work on the project includes UX/UI design, software development, testing, support, and maintance. We
-            build software in time, applying the latest technologies that optimize our work processes.
+            <FormattedMessage id="main.development.subHeader" />
           </Typography>
         </div>
       </Grid>

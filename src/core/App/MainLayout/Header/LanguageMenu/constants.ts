@@ -1,12 +1,14 @@
+import { LocaleTypes } from 'core/App/LocaleProvider/localeContext';
+
 import { LanguageItem } from './interfaces';
 
 export const languageList: LanguageItem[] = [
   {
-    id: 0,
+    id: LocaleTypes.EN,
     title: 'EN',
   },
   {
-    id: 1,
+    id: LocaleTypes.LV,
     title: 'LV',
   },
 ];

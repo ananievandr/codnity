@@ -26,10 +26,10 @@ function CardItem({ title, content, imageSrc, link }: FounderCardProps): ReactEl
           </Typography>
         </Grid>
       </Grid>
-      <a href="test" target="_blank" className={classes.link}>
+      <a href={link} target="_blank" className={classes.link} rel="noreferrer">
         <Box component="div" display="flex" justifyContent="flex-end">
           <Typography variant="body2" className={clsx(classes.content, classes.linkContent)}>
-            Founders experience
+            <FormattedMessage id="company.ourFounders.card.link" />
           </Typography>
           <IconCodnity name="violet:nav-arrow" />
         </Box>

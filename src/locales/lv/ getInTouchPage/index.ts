@@ -1,0 +1,20 @@
+export const getInTouchPage = {
+  getInTouch: {
+    header: 'Sazināties',
+    button: 'Nosūtīt ziņu',
+    name: 'Tavs vārds',
+    namePlaceholder: 'Tavs vārds',
+    lastName: 'Uzvārds',
+    lastNamePlaceholder: 'Tavs uzvārds',
+    email: 'E-pasts',
+    emailPlaceholder: 'Tavs e-pasts',
+    phone: 'Telefons',
+    phonePlaceholder: 'Tavs telefons',
+    serviceTitle: 'Izvēlies pakalpojumu',
+    service1: 'Izstrāde',
+    service2: 'IT konsultācija',
+    service3: 'UX/UI',
+    message: 'Ziņa/jautājums',
+    messagePlaceholder: 'Rakstīt ziņu',
+  },
+};

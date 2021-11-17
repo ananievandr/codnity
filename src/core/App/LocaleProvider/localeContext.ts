@@ -1,14 +1,19 @@
 import React from 'react';
 
-import enLocale from 'locales/en';
-import lvLocale from 'locales/lv';
+import en from 'locales/en';
+import lv from 'locales/lv';
 
 import { LocaleContextProps } from './interfaces';
 
-export const listLocales = [enLocale, lvLocale];
+export enum LocaleTypes {
+  EN = 'en',
+  LV = 'lv',
+}
+
+export const messages = { [LocaleTypes.EN]: en, [LocaleTypes.LV]: lv };
 
 export const LocaleContext = React.createContext<LocaleContextProps>({
-  localeIndex: 0,
+  locale: LocaleTypes.EN,
   onChangeLocale: () => {
     return;
   },

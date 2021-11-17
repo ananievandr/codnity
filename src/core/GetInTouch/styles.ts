@@ -34,6 +34,7 @@ export const useStyles = makeStyles(theme =>
       borderRadius: '16px',
       backgroundColor: '#7C61AF',
       fontWeight: 'bold',
+      minWidth: 205,
       '&:hover': {
         backgroundColor: 'rgba(91, 57, 155, 0.7)',
       },

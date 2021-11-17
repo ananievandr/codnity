@@ -7,10 +7,8 @@ export const useStyles = makeStyles(theme =>
       alignItems: 'center',
       justifyContent: 'center',
       position: 'relative',
-      [theme.breakpoints.up('md')]: {
-        marginBottom: 90,
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
+      marginBottom: 90,
+      [theme.breakpoints.down('md')]: {
         marginBottom: 120,
       },
       [theme.breakpoints.down('sm')]: {
@@ -31,8 +29,11 @@ export const useStyles = makeStyles(theme =>
     title: {
       marginBottom: 80,
     },
-    noMargin: {
+    checkbox: {
       margin: 0,
+      [theme.breakpoints.down('md')]: {
+        marginLeft: -12,
+      },
     },
     link: {
       color: '#7C61AF',
@@ -56,6 +57,7 @@ export const useStyles = makeStyles(theme =>
       borderRadius: '16px',
       backgroundColor: '#7C61AF',
       fontWeight: 'bold',
+      minWidth: 205,
       '&:hover': {
         backgroundColor: 'rgba(91, 57, 155, 0.7)',
       },
@@ -63,7 +65,6 @@ export const useStyles = makeStyles(theme =>
         width: '100%',
       },
     },
-
     greenCircle: {
       zIndex: -1,
       position: 'absolute',

@@ -2,7 +2,7 @@ import React, { useRef, useState, useCallback, useMemo } from 'react';
 
 import { openFileDialog, getListFiles, getAcceptTypeString } from './utils';
 import { getErrorValidationSingle } from './validation';
-import { FileType, FileListType, ImageUploadingPropsType, ErrorsType, ResolutionType } from './interfaces';
+import { FileListType, ImageUploadingPropsType, ErrorsType } from './interfaces';
 import { DEFAULT_NULL_INDEX, INIT_MAX_NUMBER, DEFAULT_DATA_URL_KEY } from './constants';
 
 const FileUploading: React.FC<ImageUploadingPropsType> = ({
@@ -164,5 +164,3 @@ const FileUploading: React.FC<ImageUploadingPropsType> = ({
 };
 
 export default FileUploading;
-
-export { FileType, FileListType, ImageUploadingPropsType, ErrorsType, ResolutionType };

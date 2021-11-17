@@ -37,6 +37,7 @@ export const useStyles = makeStyles(theme =>
       },
     },
     greenCircle: {
+      zIndex: -1,
       position: 'absolute',
       left: '9%',
       top: '12%',
@@ -46,9 +47,9 @@ export const useStyles = makeStyles(theme =>
       borderRadius: '50%',
       [theme.breakpoints.down('lg')]: {
         left: '11%',
+        top: '6%',
       },
       [theme.breakpoints.down('md')]: {
-        top: '6%',
         left: '12%',
       },
       [theme.breakpoints.down('sm')]: {
@@ -59,6 +60,7 @@ export const useStyles = makeStyles(theme =>
       },
     },
     yellowCircle: {
+      zIndex: -1,
       position: 'absolute',
       right: '-3%',
       top: '13%',
@@ -82,6 +84,7 @@ export const useStyles = makeStyles(theme =>
       },
     },
     redCircle: {
+      zIndex: -1,
       position: 'absolute',
       left: '-5%',
       bottom: '12%',
@@ -90,7 +93,7 @@ export const useStyles = makeStyles(theme =>
       backgroundColor: '#ED6A5A',
       borderRadius: '50%',
       [theme.breakpoints.down('lg')]: {
-        left: '-2%',
+        left: '-3%',
       },
       [theme.breakpoints.down('md')]: {
         bottom: '24%',
